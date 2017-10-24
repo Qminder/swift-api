@@ -150,14 +150,11 @@ public class QminderEvents : WebSocketDelegate {
     Close websocket connection
   */
   public func closeConnection() {
-    if self.socket.isConnected {
-      // Remove messages from history
-      messageHistory.removeAll()
-      messageQueue.removeAll()
-      
-      self.connectionClosed = true
-      self.socket.disconnect(closeCode: websocketReservedCloseCode)
-    }
+    messageHistory.removeAll()
+    messageQueue.removeAll()
+    
+    self.connectionClosed = true
+    self.socket.disconnect(closeCode: websocketReservedCloseCode)
   }
   
   /**
