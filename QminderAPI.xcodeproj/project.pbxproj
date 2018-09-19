@@ -782,10 +782,12 @@
 				TargetAttributes = {
 					6320D83E204D806D0041FFAC = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Automatic;
 					};
 					63520679204D79B9008C8C54 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1000;
 						ProvisioningStyle = Manual;
 					};
 					63520689204D79E9008C8C54 = {
@@ -1306,7 +1308,7 @@
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1332,7 +1334,7 @@
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1464,7 +1466,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1479,7 +1481,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

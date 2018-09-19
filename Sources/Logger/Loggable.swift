@@ -22,7 +22,10 @@ protocol Loggable {
 }
 
 extension Loggable {
-  func log(_ message: @autoclosure () -> Any, _ path: String = #file, _ function: String = #function, line: Int = #line) {
+  func log(_ message: @autoclosure () -> Any,
+           _ path: String = #file,
+           _ function: String = #function,
+           line: Int = #line) {
     print("\(Date()) \(path):\(line) \(function) \(message())")
   }
 }

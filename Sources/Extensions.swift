@@ -18,7 +18,7 @@ public extension JSONDecoder {
       let container = try decoder.singleValueContainer()
       let dateStr = try container.decode(String.self)
       
-      var tmpDate: Date? = nil
+      var tmpDate: Date?
       
       if dateStr.count == 17 {
         tmpDate = DateFormatter.ISO8601short.date(from: dateStr)
