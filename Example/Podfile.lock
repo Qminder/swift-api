@@ -1,5 +1,5 @@
 PODS:
-  - QminderAPI (1.8.2):
+  - QminderAPI (1.10.0):
     - Starscream (~> 3.0)
   - Starscream (3.0.6)
 
@@ -15,7 +15,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  QminderAPI: 675a68193018a0be0a4f216d106b3c6982349c85
+  QminderAPI: f0bc16a4bdc649fe7cb2cde9e3c9c76e2437f194
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
 PODFILE CHECKSUM: 8803218db304784d073990b287c0b1577218675a
