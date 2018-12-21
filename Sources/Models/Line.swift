@@ -22,7 +22,7 @@ public protocol Lineable {
 }
 
 /// Line Object
-public struct Line: Responsable & Lineable & Codable {
+public struct Line: Lineable & Responsable & Codable {
   public var statusCode: Int?
   
   public let id: Int

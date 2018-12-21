@@ -1,37 +1,47 @@
 //
 //  User.swift
-//  Pods
+//  QminderAPI
 //
 //  Created by Kristaps Grinbergs on 16/12/2016.
-//
+//  Copyright © 2018 Qminder. All rights reserved.
 //
 
 import Foundation
 
-/// User object
-public struct User: Responsable {
-  
-  public var statusCode: Int?
-  
+/// User protocol
+public protocol Userable {
   /// User ID
-  public let id: Int
+  var id: Int { get }
   
   /// Email address
-  public let email: String
+  var email: String { get }
   
-  /// 	First name
-  public let firstName: String
+  /// First name
+  var firstName: String { get }
   
   /// Last name
-  public let lastName: String
+  var lastName: String { get }
   
   /// Selected desk number
-  public let desk: Int?
+  var desk: Int? { get }
   
   /// User roles
-  public let roles: [Role]?
+  var roles: [Role]? { get }
   
   /// User pictures
+  var picture: [Picture]? { get }
+}
+
+/// User object
+public struct User: Userable & Responsable & Codable {
+  public var statusCode: Int?
+  
+  public let id: Int
+  public let email: String
+  public let firstName: String
+  public let lastName: String
+  public let desk: Int?
+  public let roles: [Role]?
   public let picture: [Picture]?
 }
 
