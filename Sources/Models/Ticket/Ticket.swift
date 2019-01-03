@@ -77,7 +77,7 @@ public extension Ticketable {
   }
   
   /// Called user ID
-  public var calledUserID: Int? {
+  public var userCalledID: Int? {
     return calledInteraction?.user
   }
   

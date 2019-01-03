@@ -108,7 +108,7 @@ class TicketModelTests: ModelTests {
     
     XCTAssertNotNil(ticket?.calledDate)
     XCTAssertEqual(ticket?.calledDate, calledDate)
-    XCTAssertEqual(ticket?.calledUserID, userId)
+    XCTAssertEqual(ticket?.userCalledID, userId)
     XCTAssertEqual(ticket?.calledDeskID, deskId)
   }
   
