@@ -100,14 +100,14 @@ class QminderEventsTests: XCTestCase {
     
     XCTAssertFalse(isConnected)
     
-    let nsError = self.error as NSError?
+    let nsError = error as NSError?
     XCTAssertNotNil(nsError)
     XCTAssertEqual(nsError?.domain, "FakeError")
     XCTAssertEqual(nsError?.code, 1)
   }
   
   func testOverviewMonitorChange() {
-    let overviewMonitorChangeExpectation = self.expectation(description: "overviewMonitorChange")
+    let overviewMonitorChangeExpectation = expectation(description: "overviewMonitorChange")
     qminderEvents?.subscribe(toDeviceEvent: .overviewMonitorChange, parameters: ["id": "1"]) { result in
       
       XCTAssertNil(result.error)
@@ -131,11 +131,11 @@ class QminderEventsTests: XCTestCase {
         overviewMonitorChangeExpectation.fulfill()
       }
     }
-    self.waitForExpectations(timeout: 1.0, handler: nil)
+    waitForExpectations(timeout: 1.0, handler: nil)
   }
   
   func testLineEvent() {
-    let lineEventExpectation = self.expectation(description: "lineEvent")
+    let lineEventExpectation = expectation(description: "lineEvent")
     qminderEvents?.subscribe(toLineEvent: .changed, parameters: ["id": 1]) { result in
       switch result {
       case .failure(let error):
@@ -157,11 +157,11 @@ class QminderEventsTests: XCTestCase {
         lineEventExpectation.fulfill()
       }
     }
-    self.waitForExpectations(timeout: 1.0, handler: nil)
+    waitForExpectations(timeout: 1.0, handler: nil)
   }
   
   func testTicketEvent() {
-    let ticketCreatedExpectation = self.expectation(description: "ticketCreated")
+    let ticketCreatedExpectation = expectation(description: "ticketCreated")
     qminderEvents?.subscribe(toTicketEvent: .created, parameters: ["location": 1]) { result in
       switch result {
       case .failure(let error):
@@ -190,7 +190,7 @@ class QminderEventsTests: XCTestCase {
         ticketCreatedExpectation.fulfill()
       }
     }
-    self.waitForExpectations(timeout: 1.0, handler: nil)
+    waitForExpectations(timeout: 1.0, handler: nil)
   }
 }
 

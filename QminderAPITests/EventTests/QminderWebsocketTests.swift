@@ -157,25 +157,25 @@ class QminderWebsocketTests: XCTestCase {
   }
   
   func overviewMonitorDidChange() {
-    let expectation = self.expectation(description: "testOverviewMonitorDidChange")
+    let overviewMonitorExpectation = expectation(description: "testOverviewMonitorDidChange")
 
     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
       if self.deviceResponse {
-        expectation.fulfill()
+        overviewMonitorExpectation.fulfill()
         timer.invalidate()
       }
     }
   }
 
   func linesChanged() {
-    let expectation = self.expectation(description: "testLinesChanged")
+    let linesChangedExpectation = expectation(description: "testLinesChanged")
 
     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
       if let lines = self.linesResponses.first,
         lines.contains(where: { $0.id == 1 && $0.name == "Business" }),
         lines.contains(where: { $0.id == 2 && $0.name == "Private" }),
         lines.contains(where: { $0.id == 3 && $0.name == "Information" }) {
-        expectation.fulfill()
+        linesChangedExpectation.fulfill()
         timer.invalidate()
       }
     }
@@ -239,11 +239,11 @@ class QminderWebsocketTests: XCTestCase {
   func addTestTimer(description: String = #function + String(#line),
                     pollInterval: TimeInterval = 1.0, checker: @escaping (Ticket) -> Bool) {
     
-    let expectation = self.expectation(description: description)
+    let expect = expectation(description: description)
     
     Timer.scheduledTimer(withTimeInterval: pollInterval, repeats: true) { timer in
       if self.eventsResponses.contains(where: { checker($0) }) {
-        expectation.fulfill()
+        expect.fulfill()
         timer.invalidate()
       }
     }

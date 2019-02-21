@@ -67,8 +67,8 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
     }
     
     let url = URL(string: websocketAddress)!
-    self.socket = WebSocket(url: url)
-    self.socket?.delegate = self
+    socket = WebSocket(url: url)
+    socket?.delegate = self
   }
   
   public func openSocket() {
@@ -76,12 +76,12 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
       log("openSocket")
       openingConnection = true
       connectionClosed = false
-      self.socket.connect()
+      socket.connect()
     }
   }
   
   public func reOpenSocket() {
-    if !self.socket.isConnected {
+    if !socket.isConnected {
       log("reOpenSocket")
       openSocket()
     }
@@ -93,8 +93,8 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
     messageHistory.removeAll()
     messageQueue.removeAll()
     
-    self.connectionClosed = true
-    self.socket.disconnect(closeCode: Constants.websocketReservedCloseCode)
+    connectionClosed = true
+    socket.disconnect(closeCode: Constants.websocketReservedCloseCode)
   }
 
   public func subscribe(toTicketEvent eventType: TicketWebsocketEvent,
@@ -218,8 +218,8 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
                            eventType: QminderWebsocketEvent,
                            messageToSend: String,
                            callback: Callback) {
-    self.callbackMap[subscriptionId] = callback
-    self.socket.write(string: messageToSend)
+    callbackMap[subscriptionId] = callback
+    socket.write(string: messageToSend)
   }
 }
 
@@ -266,9 +266,9 @@ extension QminderEvents: WebSocketDelegate {
     
     delegate?.onDisconnected(error: error)
     
-    reconnectQueue.asyncAfter(deadline: DispatchTime.now() + .seconds(Constants.reconnectInterval), execute: {
-      self.reconnect(error: error)
-    })
+    reconnectQueue.asyncAfter(deadline: .now() + .seconds(Constants.reconnectInterval)) {[weak self] in
+      self?.reconnect(error: error)
+    }
   }
   
   /// Delegate function when Websocket received message
@@ -345,8 +345,8 @@ extension QminderEvents: WebSocketDelegate {
     
     openSocket()
     
-    reconnectQueue.asyncAfter(deadline: DispatchTime.now() + .seconds(Constants.reconnectInterval), execute: {
-      self.reconnect(error: error)
-    })
+    reconnectQueue.asyncAfter(deadline: .now() + .seconds(Constants.reconnectInterval)) {[weak self] in
+      self?.reconnect(error: error)
+    }
   }
 }
