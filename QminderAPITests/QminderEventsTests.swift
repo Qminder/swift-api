@@ -29,7 +29,7 @@ class QminderEventsMock: QminderEventsProtocol {
   
   func subscribe(toTicketEvent eventType: TicketWebsocketEvent,
                  parameters: [String: Any],
-                 callback: @escaping (QminderResult<Ticket, QminderError>) -> Void) {
+                 callback: @escaping (Result<Ticket, QminderError>) -> Void) {
     let ticket = Ticket(statusCode: 200,
                         id: "1",
                         number: nil,
@@ -46,12 +46,12 @@ class QminderEventsMock: QminderEventsProtocol {
                         extra: [Extra(title: "Title", value: "value", url: "https:///www.google.com")],
                         orderAfter: nil,
                         interactions: nil)
-    callback(QminderResult(ticket))
+    callback(Result(ticket))
   }
   
   func subscribe(toDeviceEvent eventType: DeviceWebsocketEvent,
                  parameters: [String: Any],
-                 callback: @escaping (QminderResult<TVDevice?, QminderError>) -> Void) {
+                 callback: @escaping (Result<TVDevice?, QminderError>) -> Void) {
     
     let settings = Settings.init(selectedLine: 1,
                                  lines: [1, 2, 3],
@@ -64,17 +64,17 @@ class QminderEventsMock: QminderEventsProtocol {
                             layout: "standard",
                             settings: settings)
     
-    callback(QminderResult(tvDevice))
+    callback(Result(tvDevice))
   }
   
   func subscribe(toLineEvent eventType: LineWebsocketEvent,
                  parameters: [String: Any],
-                 callback: @escaping (QminderResult<[Line], QminderError>) -> Void) {
+                 callback: @escaping (Result<[Line], QminderError>) -> Void) {
     
     let lines = [Line(statusCode: 200, id: 1, name: "Line1", location: 1),
                  Line(statusCode: 200, id: 2, name: "Line2", location: 1),
                  Line(statusCode: 200, id: 3, name: "Line3", location: 1)]
-    callback(QminderResult(lines))
+    callback(Result(lines))
   }
 }
 
