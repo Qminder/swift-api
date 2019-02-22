@@ -82,6 +82,7 @@ public extension Result {
   }
   
   // MARK: CustomDebugStringConvertible
+  /// Readable result
   var description: String {
     switch self {
     case let .success(value): return ".success(\(value))"

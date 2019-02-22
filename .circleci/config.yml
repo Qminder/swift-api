@@ -54,14 +54,14 @@ jobs:
             sudo gem install cocoapods --pre
             sudo gem cleanup
             curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
-      # - run:
-      #     name: Check code coverage
-      #     command: |
-      #       brew install jq
-      #       sudo gem install atomos --no-document
-      #       sudo gem install jazzy --no-document
-      #       jazzy
-      #       ./documentation-coverage.sh
+      - run:
+          name: Check code coverage
+          command: |
+            brew install jq
+            sudo gem install atomos --no-document
+            sudo gem install jazzy --no-document
+            jazzy
+            ./documentation-coverage.sh
       - run:
           name: Pod lib lint
           command: pod lib lint --allow-warnings
