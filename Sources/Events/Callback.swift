@@ -12,11 +12,11 @@ import Foundation
 internal enum Callback {
   
   /// Ticket callback
-  case ticket((QminderResult<Ticket, QminderError>) -> Void)
+  case ticket((Result<Ticket, QminderError>) -> Void)
   
   /// Device callback
-  case device((QminderResult<TVDevice?, QminderError>) -> Void)
+  case device((Result<TVDevice?, QminderError>) -> Void)
   
   /// Line callback
-  case line((QminderResult<[Line], QminderError>) -> Void)
+  case line((Result<[Line], QminderError>) -> Void)
 }

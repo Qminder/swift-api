@@ -8,7 +8,7 @@
 import Foundation
 
 /// Qminder Event type
-public enum QminderEvent: String, CustomStringConvertible {
+public enum QminderEvent: String, CustomStringConvertible, CaseIterable {
   
   /// Ticket created
   case ticketCreated = "TICKET_CREATED"

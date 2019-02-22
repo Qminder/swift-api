@@ -2,7 +2,7 @@ import Foundation
 import QminderAPI
 
 @discardableResult
-public func prettyPrint<V, E: Swift.Error>(_ title: String, _ result: QminderResult<V, E>) -> V? {
+public func prettyPrint<V, E: Swift.Error>(_ title: String, _ result: Result<V, E>) -> V? {
   print("-- \(title) --")
   
   switch result {

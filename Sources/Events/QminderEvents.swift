@@ -99,10 +99,10 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
 
   public func subscribe(toTicketEvent eventType: TicketWebsocketEvent,
                         parameters: [String: Any],
-                        callback: @escaping (QminderResult<Ticket, QminderError>) -> Void) {
+                        callback: @escaping (Result<Ticket, QminderError>) -> Void) {
     
     guard let (message, subscriptionId) = parseParameters(eventType: .ticket(eventType), parameters: parameters) else {
-      callback(QminderResult.failure(QminderError.parse))
+      callback(Result.failure(QminderError.parse))
       return
     }
     
@@ -114,10 +114,10 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
 
   public func subscribe(toDeviceEvent eventType: DeviceWebsocketEvent,
                         parameters: [String: Any],
-                        callback: @escaping (QminderResult<TVDevice?, QminderError>) -> Void) {
+                        callback: @escaping (Result<TVDevice?, QminderError>) -> Void) {
     
     guard let (message, subscriptionId) = parseParameters(eventType: .device(eventType), parameters: parameters) else {
-      callback(QminderResult.failure(QminderError.parse))
+      callback(Result.failure(QminderError.parse))
       return
     }
     
@@ -129,10 +129,10 @@ public class QminderEvents: QminderEventsProtocol, Loggable {
   
   public func subscribe(toLineEvent eventType: LineWebsocketEvent,
                         parameters: [String: Any],
-                        callback: @escaping (QminderResult<[Line], QminderError>) -> Void) {
+                        callback: @escaping (Result<[Line], QminderError>) -> Void) {
     
     guard let (message, subscriptionId) = parseParameters(eventType: .line(eventType), parameters: parameters) else {
-      callback(QminderResult.failure(QminderError.parse))
+      callback(Result.failure(QminderError.parse))
       return
     }
     
@@ -305,17 +305,17 @@ extension QminderEvents: WebSocketDelegate {
         return
       }
       
-      callback(QminderResult<Ticket, QminderError>.success(ticket))
+      callback(Result<Ticket, QminderError>.success(ticket))
     case .device(let callback):
       let device = try? jsonDecoderWithMilliseconds.decode(DeviceEventResponse.self, from: data).data
       
-      callback(QminderResult<TVDevice?, QminderError>.success(device))
+      callback(Result<TVDevice?, QminderError>.success(device))
     case .line(let callback):
       guard let lines = try? jsonDecoderWithMilliseconds.decode(LinesEventResponse.self, from: data).lines else {
         return
       }
       
-      callback(QminderResult<[Line], QminderError>.success(lines))
+      callback(Result<[Line], QminderError>.success(lines))
     }
   }
 

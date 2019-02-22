@@ -27,7 +27,7 @@ public protocol QminderAPIProtocol {
    - Parameters:
      - completion: Callback block what is executed when location list is received
    */
-  func getLocationsList(completion: @escaping (QminderResult<[Location], QminderError>) -> Void)
+  func getLocationsList(completion: @escaping (Result<[Location], QminderError>) -> Void)
   
   /**
    Get location details
@@ -36,7 +36,7 @@ public protocol QminderAPIProtocol {
      - locationId: Location ID
      - completion: Callback block what is executed when location data is received
    */
-  func getLocationDetails(locationId: Int, completion: @escaping (QminderResult<Location, QminderError>) -> Void)
+  func getLocationDetails(locationId: Int, completion: @escaping (Result<Location, QminderError>) -> Void)
   
   /**
    Get Location Lines
@@ -45,7 +45,7 @@ public protocol QminderAPIProtocol {
      - locationId: Location ID
      - completion: Callback block what is executed when location lines is received
    */
-  func getLocationLines(locationId: Int, completion: @escaping (QminderResult<[Line], QminderError>) -> Void)
+  func getLocationLines(locationId: Int, completion: @escaping (Result<[Line], QminderError>) -> Void)
   
   /**
    Get location users
@@ -54,7 +54,7 @@ public protocol QminderAPIProtocol {
      - locationId: Location ID
      - completion: Callback block what is executed when location users is received
    */
-  func getLocationUsers(locationId: Int, completion: @escaping (QminderResult<[User], QminderError>) -> Void)
+  func getLocationUsers(locationId: Int, completion: @escaping (Result<[User], QminderError>) -> Void)
   
   /**
    Get location desks
@@ -63,7 +63,7 @@ public protocol QminderAPIProtocol {
      - locationId: Location ID
      - completion: Callback block what is executed when location users is received
    */
-  func getLocationDesks(locationId: Int, completion: @escaping (QminderResult<[Desk], QminderError>) -> Void)
+  func getLocationDesks(locationId: Int, completion: @escaping (Result<[Desk], QminderError>) -> Void)
   
   // MARK: - Lines
   /**
@@ -73,7 +73,7 @@ public protocol QminderAPIProtocol {
      - lineId: Line ID
      - completion: Callback block what is executed when line data is received
    */
-  func getLineDetails(lineId: Int, completion: @escaping (QminderResult<Line, QminderError>) -> Void)
+  func getLineDetails(lineId: Int, completion: @escaping (Result<Line, QminderError>) -> Void)
   
   // MARK: - Tickets
   // swiftlint:disable function_parameter_count
@@ -98,7 +98,7 @@ public protocol QminderAPIProtocol {
                      callerId: Int?, minCreatedTimestamp: Int?, maxCreatedTimestamp: Int?,
                      minCalledTimestamp: Int?, maxCalledTimestamp: Int?,
                      limit: Int?, order: String?, responseScope: Set<String>?,
-                     completion: @escaping (QminderResult<[Ticket], QminderError>) -> Void)
+                     completion: @escaping (Result<[Ticket], QminderError>) -> Void)
   
   /**
    Get ticket details
@@ -107,7 +107,7 @@ public protocol QminderAPIProtocol {
      - ticketId: Ticket ID
      - completion: Callback block when ticket details are received
    */
-  func getTicketDetails(ticketId: String, completion: @escaping (QminderResult<Ticket, QminderError>) -> Void)
+  func getTicketDetails(ticketId: String, completion: @escaping (Result<Ticket, QminderError>) -> Void)
   
   // MARK: - Users
   /**
@@ -117,7 +117,7 @@ public protocol QminderAPIProtocol {
      - userId: User ID
      - completion: Callback block when user details are received
    */
-  func getUserDetails(userId: Int, completion: @escaping (QminderResult<User, QminderError>) -> Void)
+  func getUserDetails(userId: Int, completion: @escaping (Result<User, QminderError>) -> Void)
   
   // MARK: - Devices
   /**
@@ -126,7 +126,7 @@ public protocol QminderAPIProtocol {
    - Parameters:
      - completion: Callback block what is executed when pairing code and secret key is received from server
    */
-  func getPairingCodeAndSecret(completion: @escaping (QminderResult<TVPairingCode, QminderError>) -> Void)
+  func getPairingCodeAndSecret(completion: @escaping (Result<TVPairingCode, QminderError>) -> Void)
   
   /**
    Pair TV with code.
@@ -136,7 +136,7 @@ public protocol QminderAPIProtocol {
      - secret: Secret key
      - completion: Callback block when pairing is done on server:
    */
-  func pairTV(code: String, secret: String, completion: @escaping (QminderResult<TVAPIData, QminderError>) -> Void)
+  func pairTV(code: String, secret: String, completion: @escaping (Result<TVAPIData, QminderError>) -> Void)
   
   /**
    Get a details of a TV
@@ -145,7 +145,7 @@ public protocol QminderAPIProtocol {
      - tvID: TV ID
      - completion: Callback block when TV details are received
    */
-  func tvDetails(id: Int, completion: @escaping (QminderResult<TVDevice, QminderError>) -> Void)
+  func tvDetails(id: Int, completion: @escaping (Result<TVDevice, QminderError>) -> Void)
   
   /**
    Update the heartbeat of the TV and add optional metadata in JSON format
@@ -157,7 +157,7 @@ public protocol QminderAPIProtocol {
    */
   func tvHeartbeat(id: Int,
                    metadata: [String: Any],
-                   completion: @escaping (QminderResult<Void?, QminderError>) -> Void)
+                   completion: @escaping (Result<Void?, QminderError>) -> Void)
   
   /**
    Empty state text message for TV
@@ -168,7 +168,7 @@ public protocol QminderAPIProtocol {
    */
   func tvEmptyState(id: Int,
                     language: String,
-                    completion: @escaping (QminderResult<EmptyState, QminderError>) -> Void)
+                    completion: @escaping (Result<EmptyState, QminderError>) -> Void)
 }
 
 extension QminderAPIProtocol {
@@ -179,7 +179,7 @@ extension QminderAPIProtocol {
                             minCalledTimestamp: Int? = nil, maxCalledTimestamp: Int? = nil,
                             limit: Int? = nil, order: String? = nil,
                             responseScope: Set<String>? = nil,
-                            completion: @escaping (QminderResult<[Ticket], QminderError>) -> Void) {
+                            completion: @escaping (Result<[Ticket], QminderError>) -> Void) {
     searchTickets(locationId: locationId, lineId: lineId,
                   status: status, callerId: callerId,
                   minCreatedTimestamp: minCreatedTimestamp, maxCreatedTimestamp: maxCreatedTimestamp,

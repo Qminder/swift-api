@@ -62,27 +62,27 @@ public protocol Ticketable: Codable {
 public extension Ticketable {
   
   /// Creted date
-  public var createdDate: Date {
+  var createdDate: Date {
     return created.date
   }
   
   /// Called date
-  public var calledDate: Date? {
+  var calledDate: Date? {
     return calledInteraction?.start
   }
   
   /// Served date
-  public var servedDate: Date? {
+  var servedDate: Date? {
     return served?.date
   }
   
   /// Called user ID
-  public var userCalledID: Int? {
+  var userCalledID: Int? {
     return calledInteraction?.user
   }
   
   /// Called Desk ID
-  public var calledDeskID: Int? {
+  var calledDeskID: Int? {
     return calledInteraction?.desk
   }
   

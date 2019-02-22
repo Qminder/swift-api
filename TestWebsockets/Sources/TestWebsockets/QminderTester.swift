@@ -15,10 +15,7 @@ class QminderEventsTester {
   var subscriptions: [QminderEvent: String] = [:]
 
   /// What events we need to start tests?
-  let events: Set<QminderEvent> = [.ticketCreated, .ticketCalled,
-                                   .ticketRecalled, .ticketServed,
-                                   .ticketCancelled, .ticketChanged,
-                                   .overviewMonitorChange, .linesChanged]
+  let events = Set(QminderEvent.allCases)
 
   init(ws: WebSocket) {
     self.ws = ws
@@ -36,7 +33,7 @@ class QminderEventsTester {
       let message = try JSONDecoder().decode(WebsocketMessage.self, from: data)
       print(message)
       subscriptions[message.eventType] = message.id
-
+      
       if self.events == Set(subscriptions.keys) {
         self.executeTests()
       }

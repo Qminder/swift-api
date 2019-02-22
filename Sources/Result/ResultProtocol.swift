@@ -26,23 +26,23 @@ public protocol ResultProtocol: CustomStringConvertible {
 	init(_ error: Error)
 	
   /// Result
-	var result: QminderResult<Value, Error> { get }
+	var result: Result<Value, Error> { get }
 }
 
-public extension QminderResult {
+public extension Result {
   
   /// Constructs a success wrapping a `value`.
-  public init(_ value: Value) {
+  init(_ value: Success) {
     self = .success(value)
   }
   
   /// Constructs a failure wrapping an `error`.
-  public init(_ error: Error) {
+  init(_ error: Failure) {
     self = .failure(error)
   }
   
 	/// Returns the value if self represents a success, `nil` otherwise.
-	public var value: Value? {
+  var value: Success? {
     switch self {
     case let .success(value):
       return value
@@ -52,7 +52,7 @@ public extension QminderResult {
 	}
 	
 	/// Returns the error if self represents a failure, `nil` otherwise.
-	public var error: Error? {
+  var error: Error? {
 		switch self {
 		case .success:
       return nil
@@ -62,7 +62,7 @@ public extension QminderResult {
 	}
 
   /// Returns `true` if the result is a success, `false` otherwise.
-  public var isSuccess: Bool {
+  var isSuccess: Bool {
     switch self {
     case .success:
       return true
@@ -72,17 +72,17 @@ public extension QminderResult {
   }
 
   /// Returns `true` if the result is a failure, `false` otherwise.
-  public var isFailure: Bool {
+  var isFailure: Bool {
     return !isSuccess
   }
   
   /// Result value
-  public var result: QminderResult<Value, Error> {
+  var result: Result<Success, Failure> {
     return self
   }
   
   // MARK: CustomDebugStringConvertible
-  public var description: String {
+  var description: String {
     switch self {
     case let .success(value): return ".success(\(value))"
     case let .failure(error): return ".failure(\(error))"
