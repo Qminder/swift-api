@@ -20,6 +20,7 @@ class DeviceResponseTests: ModelTests {
     let deviceName = String.random
     let themeName = String.random
     let layout = String.random
+    let feature = String.random
     
     let tvDeviceResponseData: [String: Any] = [
       "subscriptionId": subScriptionId,
@@ -32,6 +33,7 @@ class DeviceResponseTests: ModelTests {
           "lines": [1, 2, 3],
           "clearTickets": "afterCalling"
         ],
+        "features": [feature],
         "theme": themeName,
         "layout": layout
       ]
@@ -52,5 +54,7 @@ class DeviceResponseTests: ModelTests {
     XCTAssertEqual(device.layout, layout)
     XCTAssertNotNil(device.settings)
     XCTAssertEqual(device.settings?.clearTickets, .afterCalling)
+    XCTAssertTrue(device.features?.count == 1)
+    XCTAssertEqual(device.features?.first, feature)
   }
 }

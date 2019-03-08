@@ -16,6 +16,8 @@ class TVDeviceModelTests: ModelTests {
   private let tvDeviceName = String.random
   private let theme = String.random
   private let layout = String.random
+  private let firstFeature = String.random
+  private let secondFeature = String.random
   
   private let firstLineId = Int.random
   private let secondLineId = Int.random
@@ -46,6 +48,7 @@ class TVDeviceModelTests: ModelTests {
         "clearTickets": "afterCalling",
         "notificationViewLineVisible": true
       ],
+      "features": [firstFeature, secondFeature],
       "theme": theme,
       "layout": layout
     ]
@@ -60,6 +63,8 @@ class TVDeviceModelTests: ModelTests {
     XCTAssertEqual(device?.layout, layout)
     XCTAssertNotNil(device?.settings)
     XCTAssertEqual(device?.settings?.clearTickets, .afterCalling)
+    XCTAssertTrue(device?.features?.contains(firstFeature) ?? false)
+    XCTAssertTrue(device?.features?.contains(secondFeature) ?? false)
     
     guard let lines = device?.settings?.lines else {
       XCTFail("Can't get device lines")

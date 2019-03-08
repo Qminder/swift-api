@@ -28,6 +28,9 @@ public struct TVDevice: Responsable {
   
   /// Settings of the TV, only included when applicable
   public let settings: Settings?
+  
+  /// TV feature flags
+  public let features: [String]?
 }
 
 /// Created data object

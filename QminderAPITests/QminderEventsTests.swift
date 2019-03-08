@@ -62,7 +62,8 @@ class QminderEventsMock: QminderEventsProtocol {
                             name: "Device",
                             theme: "standard",
                             layout: "standard",
-                            settings: settings)
+                            settings: settings,
+                            features: ["FEATURE"])
     
     callback(QminderResult(tvDevice))
   }
