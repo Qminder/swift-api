@@ -33,11 +33,11 @@ public enum EmptyStateLayout: String, Codable {
     switch rawValue.lowercased() {
     case "connected":
       self = .connected
-    case "goodMorning":
+    case "goodmorning":
       self = .goodMorning
-    case "signIniPad":
+    case "signinipad":
       self = .signIniPad
-    case "signIn":
+    case "signin":
       self = .signIn
     case "closed":
       self = .closed
