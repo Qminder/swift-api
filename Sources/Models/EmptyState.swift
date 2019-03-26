@@ -11,19 +11,34 @@ import Foundation
 /// Empty state layout
 public enum EmptyStateLayout: String, Codable {
   
-  /// Closed
-  case closed = "CLOSED"
+  /// TV connected
+  case connected
   
-  /// Simple
-  case simple = "SIMPLE"
+  /// Good morning
+  case goodMorning
+  
+  /// Sign-in with iPad
+  case signIniPad
+  
+  /// Closed
+  case closed
+  
+  /// Sign-in without iPad
+  case signIn
   
   /// Other (not specified)
   case other
   
   public init?(rawValue: String) {
     switch rawValue.lowercased() {
-    case "simple":
-      self = .simple
+    case "connected":
+      self = .connected
+    case "goodmorning":
+      self = .goodMorning
+    case "signinipad":
+      self = .signIniPad
+    case "signin":
+      self = .signIn
     case "closed":
       self = .closed
     default:

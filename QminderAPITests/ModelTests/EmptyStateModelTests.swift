@@ -22,13 +22,13 @@ class EmptyStateModelTests: ModelTests {
   func testParsingEmptyStateSimple() {
     
     let data: [String: Any] = [
-      "layout": "simple",
+      "layout": "other",
       "message": message
     ]
     let emptyState = try? data.decodeAs(EmptyState.self)
     
     XCTAssertEqual(emptyState?.message, message)
-    XCTAssertEqual(emptyState?.layout, .simple)
+    XCTAssertEqual(emptyState?.layout, .other)
   }
   
   func testParsingEmptyStateClosed() {
