@@ -55,16 +55,12 @@
 		6320D862204D81580041FFAC /* QminderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520633204D78E5008C8C54 /* QminderError.swift */; };
 		6320D863204D81580041FFAC /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520634204D78E5008C8C54 /* ParameterEncoding.swift */; };
 		6320D864204D815B0041FFAC /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
-		6320D865204D815B0041FFAC /* QminderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520632204D78E5008C8C54 /* QminderResult.swift */; };
 		6320D867204D81660041FFAC /* QminderAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6320D866204D81660041FFAC /* QminderAPI.podspec */; };
 		6320D868204D81A70041FFAC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63520674204D7966008C8C54 /* Starscream.framework */; };
 		6320D86B204D83310041FFAC /* QminderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320D83F204D806D0041FFAC /* QminderAPI.framework */; };
 		635206AC204D7A2A008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
-		635206AD204D7A2A008C8C54 /* QminderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520632204D78E5008C8C54 /* QminderResult.swift */; };
 		635206AE204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
-		635206AF204D7A2B008C8C54 /* QminderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520632204D78E5008C8C54 /* QminderResult.swift */; };
 		635206B0204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
-		635206B1204D7A2B008C8C54 /* QminderResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520632204D78E5008C8C54 /* QminderResult.swift */; };
 		635206B2204D7A2E008C8C54 /* QminderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520633204D78E5008C8C54 /* QminderError.swift */; };
 		635206B3204D7A2E008C8C54 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520634204D78E5008C8C54 /* ParameterEncoding.swift */; };
 		635206B4204D7A2E008C8C54 /* QminderError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520633204D78E5008C8C54 /* QminderError.swift */; };
@@ -279,7 +275,6 @@
 		6320D83F204D806D0041FFAC /* QminderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QminderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6320D866204D81660041FFAC /* QminderAPI.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = QminderAPI.podspec; sourceTree = "<group>"; };
 		63520631204D78E5008C8C54 /* ResultProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultProtocol.swift; sourceTree = "<group>"; };
-		63520632204D78E5008C8C54 /* QminderResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderResult.swift; sourceTree = "<group>"; };
 		63520633204D78E5008C8C54 /* QminderError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderError.swift; sourceTree = "<group>"; };
 		63520634204D78E5008C8C54 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		63520636204D78E5008C8C54 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
@@ -466,7 +461,6 @@
 			isa = PBXGroup;
 			children = (
 				63520631204D78E5008C8C54 /* ResultProtocol.swift */,
-				63520632204D78E5008C8C54 /* QminderResult.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -1040,7 +1034,6 @@
 				63AFBAA120D0FC21009E3D1C /* TicketWebsocketEvent.swift in Sources */,
 				6320D861204D81550041FFAC /* Created.swift in Sources */,
 				63AFBA9C20D00A0D009E3D1C /* Callback.swift in Sources */,
-				6320D865204D815B0041FFAC /* QminderResult.swift in Sources */,
 				6320D84A204D81440041FFAC /* QminderEvents.swift in Sources */,
 				6320D852204D81510041FFAC /* TVPairingCode.swift in Sources */,
 				6320D84F204D81480041FFAC /* TicketEventResponse.swift in Sources */,
@@ -1100,7 +1093,6 @@
 				635206B2204D7A2E008C8C54 /* QminderError.swift in Sources */,
 				63520700204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496C20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
-				635206AD204D7A2A008C8C54 /* QminderResult.swift in Sources */,
 				6315470320A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6B21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAC20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
@@ -1151,7 +1143,6 @@
 				635206B4204D7A2E008C8C54 /* QminderError.swift in Sources */,
 				63520704204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496D20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
-				635206AF204D7A2B008C8C54 /* QminderResult.swift in Sources */,
 				6315470420A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6C21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAD20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
@@ -1202,7 +1193,6 @@
 				635206B6204D7A2F008C8C54 /* QminderError.swift in Sources */,
 				63520708204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496E20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
-				635206B1204D7A2B008C8C54 /* QminderResult.swift in Sources */,
 				6315470520A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6D21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAE20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
@@ -1316,7 +1306,7 @@
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1342,7 +1332,7 @@
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1474,7 +1464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1489,7 +1479,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1517,7 +1507,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -1546,7 +1536,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 10.0;
 			};
@@ -1578,7 +1568,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -1608,7 +1598,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -1636,7 +1626,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -1666,7 +1656,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.0;
 			};
@@ -1683,7 +1673,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1699,7 +1689,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

@@ -18,7 +18,7 @@ public extension Dictionary {
    
    - Returns: Optional data as JSON
   */
-  public func jsonData(prettify: Bool = false) -> Data? {
+  func jsonData(prettify: Bool = false) -> Data? {
     guard JSONSerialization.isValidJSONObject(self) else {
       return nil
     }
@@ -40,7 +40,7 @@ public extension Dictionary where Key == String, Value == Any {
    
    - Returns: Decoded decodable as given type
   */
-  public func decodeAs<T>(_ type: T.Type, decoder: JSONDecoder = JSONDecoder()) throws -> T where T: Decodable {
+  func decodeAs<T>(_ type: T.Type, decoder: JSONDecoder = JSONDecoder()) throws -> T where T: Decodable {
     let data = try JSONSerialization.data(withJSONObject: self, options: [])
     let object = try decoder.decode(type, from: data)
     

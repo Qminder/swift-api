@@ -25,28 +25,28 @@ public struct QminderAPI: QminderAPIProtocol {
     self.serverAddress = serverAddress
   }
   
-  public func getLocationsList(completion: @escaping (QminderResult<[Location], QminderError>) -> Void) {
+  public func getLocationsList(completion: @escaping (Result<[Location], QminderError>) -> Void) {
     fetch(.locations, decodingType: Locations.self) { completion($0) }
   }
   
   public func getLocationDetails(locationId: Int,
-                                 completion: @escaping (QminderResult<Location, QminderError>) -> Void) {
+                                 completion: @escaping (Result<Location, QminderError>) -> Void) {
     fetch(.location(locationId), decodingType: Location.self) { completion($0) }
   }
   
-  public func getLocationLines(locationId: Int, completion: @escaping (QminderResult<[Line], QminderError>) -> Void) {
+  public func getLocationLines(locationId: Int, completion: @escaping (Result<[Line], QminderError>) -> Void) {
     fetch(.lines(locationId), decodingType: Lines.self) { completion($0) }
   }
   
-  public func getLocationUsers(locationId: Int, completion: @escaping (QminderResult<[User], QminderError>) -> Void) {
+  public func getLocationUsers(locationId: Int, completion: @escaping (Result<[User], QminderError>) -> Void) {
     fetch(.users(locationId), decodingType: Users.self) { completion($0) }
   }
   
-  public func getLocationDesks(locationId: Int, completion: @escaping (QminderResult<[Desk], QminderError>) -> Void) {
+  public func getLocationDesks(locationId: Int, completion: @escaping (Result<[Desk], QminderError>) -> Void) {
     fetch(.desks(locationId), decodingType: Desks.self) { completion($0) }
   }
   
-  public func getLineDetails(lineId: Int, completion: @escaping (QminderResult<Line, QminderError>) -> Void) {
+  public func getLineDetails(lineId: Int, completion: @escaping (Result<Line, QminderError>) -> Void) {
     fetch(.line(lineId), decodingType: Line.self) { completion($0) }
   }
   
@@ -54,7 +54,7 @@ public struct QminderAPI: QminderAPIProtocol {
                             callerId: Int? = nil, minCreatedTimestamp: Int? = nil, maxCreatedTimestamp: Int? = nil,
                             minCalledTimestamp: Int? = nil, maxCalledTimestamp: Int? = nil,
                             limit: Int? = nil, order: String? = nil, responseScope: Set<String>? = nil,
-                            completion: @escaping (QminderResult<[Ticket], QminderError>) -> Void) {
+                            completion: @escaping (Result<[Ticket], QminderError>) -> Void) {
     
     var parameters = [String: Any]()
     
@@ -73,35 +73,35 @@ public struct QminderAPI: QminderAPIProtocol {
     fetch(.tickets(parameters), decodingType: Tickets.self) { completion($0) }
   }
   
-  public func getTicketDetails(ticketId: String, completion: @escaping (QminderResult<Ticket, QminderError>) -> Void) {
+  public func getTicketDetails(ticketId: String, completion: @escaping (Result<Ticket, QminderError>) -> Void) {
     fetch(.ticket(ticketId), decodingType: Ticket.self) { completion($0) }
   }
   
-  public func getUserDetails(userId: Int, completion: @escaping (QminderResult<User, QminderError>) -> Void) {
+  public func getUserDetails(userId: Int, completion: @escaping (Result<User, QminderError>) -> Void) {
     fetch(.user(userId), decodingType: User.self) { completion($0) }
   }
   
-  public func getPairingCodeAndSecret(completion: @escaping (QminderResult<TVPairingCode, QminderError>) -> Void) {
+  public func getPairingCodeAndSecret(completion: @escaping (Result<TVPairingCode, QminderError>) -> Void) {
     fetch(.tvCode, decodingType: TVPairingCode.self) { completion($0) }
   }
   
   public func pairTV(code: String,
                      secret: String,
-                     completion: @escaping (QminderResult<TVAPIData, QminderError>) -> Void) {
+                     completion: @escaping (Result<TVAPIData, QminderError>) -> Void) {
     fetch(.tvPairingStatus(code, ["secret": secret]), decodingType: TVAPIData.self) { completion($0) }
   }
   
-  public func tvDetails(id: Int, completion: @escaping (QminderResult<TVDevice, QminderError>) -> Void) {
+  public func tvDetails(id: Int, completion: @escaping (Result<TVDevice, QminderError>) -> Void) {
     fetch(.tvDetails(id), decodingType: TVDevice.self) { completion($0) }
   }
   
   public func tvHeartbeat(id: Int, metadata: [String: Any],
-                          completion: @escaping (QminderResult<Void?, QminderError>) -> Void) {
+                          completion: @escaping (Result<Void?, QminderError>) -> Void) {
     fetch(.tvHeartbeat(id, metadata)) { completion($0) }
   }
   
   public func tvEmptyState(id: Int, language: String,
-                           completion: @escaping (QminderResult<EmptyState, QminderError>) -> Void) {
+                           completion: @escaping (Result<EmptyState, QminderError>) -> Void) {
     fetch(.tvEmptyState(id, ["language": language]), decodingType: EmptyState.self) { completion($0) }
   }
 }
@@ -116,13 +116,13 @@ private extension QminderAPI {
      - completion: Closure called when data is retrieved correctly
   */
   func fetch<T: ResponsableWithData>(_ endPoint: QminderAPIEndpoint, decodingType: T.Type,
-                                     _ completion: @escaping (QminderResult<T.Data, QminderError>) -> Void) {
+                                     _ completion: @escaping (Result<T.Data, QminderError>) -> Void) {
     performRequestWith(endPoint) { result in
       switch result {
       case let .success(data):
         completion(data.decode(decodingType))
       case let .failure(error):
-        completion(QminderResult(error))
+        completion(Result(error))
       }
     }
   }
@@ -136,13 +136,13 @@ private extension QminderAPI {
      - completion: Closure called when data is retrieved correctly
   */
   func fetch<T: Responsable>(_ endPoint: QminderAPIEndpoint, decodingType: T.Type,
-                             _ completion: @escaping (QminderResult<T, QminderError>) -> Void) {
+                             _ completion: @escaping (Result<T, QminderError>) -> Void) {
     performRequestWith(endPoint) { result in
       switch result {
       case let .success(data):
         completion(data.decode(decodingType))
       case let .failure(error):
-        completion(QminderResult(error))
+        completion(Result(error))
       }
     }
   }
@@ -155,13 +155,13 @@ private extension QminderAPI {
      - completion: Closure called when data is retrieved correctly
   */
   func fetch(_ endPoint: QminderAPIEndpoint,
-             _ completion: @escaping (QminderResult<Void?, QminderError>) -> Void) {
+             _ completion: @escaping (Result<Void?, QminderError>) -> Void) {
     performRequestWith(endPoint) { result in
       switch result {
       case .success:
-        completion(QminderResult.success(nil))
+        completion(Result.success(nil))
       case let .failure(error):
-        completion(QminderResult(error))
+        completion(Result(error))
       }
     }
   }
@@ -174,7 +174,7 @@ private extension QminderAPI {
      - completion: Closure called when data is retrieved correctly
   */
   func performRequestWith(_ endPoint: QminderAPIEndpoint,
-                          _ completion: @escaping (QminderResult<Data, QminderError>) -> Void) {
+                          _ completion: @escaping (Result<Data, QminderError>) -> Void) {
     do {
       let request = try endPoint.request(serverAddress: serverAddress, apiKey: apiKey)
       
@@ -186,7 +186,7 @@ private extension QminderAPI {
         }
       }.resume()
     } catch {
-      completion(QminderResult(error.qminderError))
+      completion(Result(error.qminderError))
     }
   }
   
@@ -200,20 +200,20 @@ private extension QminderAPI {
    
    - Returns: Result of data or Qmidner Error
   */
-  func parseResponse(data: Data?, response: URLResponse?, error: Error?) -> QminderResult<Data, QminderError> {
+  func parseResponse(data: Data?, response: URLResponse?, error: Error?) -> Result<Data, QminderError> {
     if let error = error {
-      return QminderResult(.request(error))
+      return Result(.request(error))
     } else {
       
       guard let httpResponse = response as? HTTPURLResponse, let resultData = data else {
-        return QminderResult(.parseRequest)
+        return Result(.parseRequest)
       }
       
       if httpResponse.statusCode != 200 {
-        return QminderResult(.statusCode(httpResponse.statusCode))
+        return Result(.statusCode(httpResponse.statusCode))
       }
       
-      return QminderResult(resultData)
+      return Result(resultData)
     }
     
   }

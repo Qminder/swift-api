@@ -7,6 +7,7 @@
 
 import Foundation
 
+/// Desk protocol
 public protocol Deskable {
   
   /// Desk ID
