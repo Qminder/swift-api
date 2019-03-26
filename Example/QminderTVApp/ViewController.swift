@@ -235,7 +235,7 @@ class ViewController: UIViewController, QminderEventsDelegate, UITableViewDelega
     pairingCode.isHidden = true
   }
   
-  func messageReceived(eventType: TicketWebsocketEvent, result: QminderResult<Ticket, QminderError>) {
+  func messageReceived(eventType: TicketWebsocketEvent, result: Result<Ticket, QminderError>) {
     switch result {
       case .success(let ticket):
         print("\(eventType.rawValue) \(ticket)")

@@ -1,5 +1,5 @@
 PODS:
-  - QminderAPI (1.10.0):
+  - QminderAPI (1.14.0):
     - Starscream (~> 3.0)
   - Starscream (3.0.6)
 
@@ -15,9 +15,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  QminderAPI: f0bc16a4bdc649fe7cb2cde9e3c9c76e2437f194
+  QminderAPI: 4c1539c478cc0d0fb9e12fb9b17808513ca8bf34
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
 
 PODFILE CHECKSUM: 8803218db304784d073990b287c0b1577218675a
 
-COCOAPODS: 1.6.0.beta.1
+COCOAPODS: 1.6.1
