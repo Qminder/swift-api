@@ -9,7 +9,7 @@
 import Foundation
 
 /// Qminder API
-public struct QminderAPI: QminderAPIProtocol {
+public struct QminderAPI: QminderAPIProtocolResponse {
   
   /// Qminder API key
   private var apiKey: String?
