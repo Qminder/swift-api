@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// Qminder API protocol
+/// Qminder API protocol with returing also response
 public protocol QminderAPIProtocolResponse: QminderAPIProtocol {
   
   // MARK: - Location
