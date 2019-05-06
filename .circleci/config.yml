@@ -2,7 +2,7 @@ version: 2
 jobs:
   build-and-test:
     macos:
-      xcode: "10.2.0"
+      xcode: "10.2.1"
 
     steps:
       - checkout
@@ -18,9 +18,9 @@ jobs:
             brew outdated carthage || brew upgrade carthage
             scripts/bootstrap-if-needed.sh
 
-      # - run:
-      #     name: Install Swiftlint
-      #     command: brew install swiftlint
+      - run:
+          name: Install Swiftlint
+          command: brew install swiftlint
 
       - run:
           name: Build macOS and watchOS
