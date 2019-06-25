@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -56,7 +56,6 @@
 		6320D863204D81580041FFAC /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520634204D78E5008C8C54 /* ParameterEncoding.swift */; };
 		6320D864204D815B0041FFAC /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		6320D867204D81660041FFAC /* QminderAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6320D866204D81660041FFAC /* QminderAPI.podspec */; };
-		6320D868204D81A70041FFAC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63520674204D7966008C8C54 /* Starscream.framework */; };
 		6320D86B204D83310041FFAC /* QminderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320D83F204D806D0041FFAC /* QminderAPI.framework */; };
 		635206AC204D7A2A008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		635206AE204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
@@ -145,13 +144,14 @@
 		63520706204D7A4B008C8C54 /* LinesEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520650204D78E5008C8C54 /* LinesEventResponse.swift */; };
 		63520707204D7A4B008C8C54 /* DeviceEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520651204D78E5008C8C54 /* DeviceEventResponse.swift */; };
 		63520708204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520652204D78E5008C8C54 /* TicketEventResponse.swift */; };
-		6352070A204D7A55008C8C54 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63520709204D7A55008C8C54 /* Starscream.framework */; };
-		6352070C204D7A64008C8C54 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6352070B204D7A64008C8C54 /* Starscream.framework */; };
-		6352070E204D7A6B008C8C54 /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6352070D204D7A6B008C8C54 /* Starscream.framework */; };
 		635BDB66210B296B000EFDEC /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BDB65210B296B000EFDEC /* Loggable.swift */; };
 		635BDB67210B296B000EFDEC /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BDB65210B296B000EFDEC /* Loggable.swift */; };
 		635BDB68210B296B000EFDEC /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BDB65210B296B000EFDEC /* Loggable.swift */; };
 		635BDB69210B296B000EFDEC /* Loggable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 635BDB65210B296B000EFDEC /* Loggable.swift */; };
+		635D668822C24F0C00A5BC9F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 635D668722C24F0C00A5BC9F /* Starscream */; };
+		635D668A22C24FA300A5BC9F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 635D668922C24FA300A5BC9F /* Starscream */; };
+		635D668C22C24FAE00A5BC9F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 635D668B22C24FAE00A5BC9F /* Starscream */; };
+		635D668E22C2501E00A5BC9F /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 635D668D22C2501E00A5BC9F /* Starscream */; };
 		635E0DD4204D915F00B1123A /* LinesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67F204D8D60001554AC /* LinesAPITests.swift */; };
 		635E0DD5204D915F00B1123A /* UsersAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67E204D8D60001554AC /* UsersAPITests.swift */; };
 		635E0DD6204D915F00B1123A /* LineModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66C204D8D60001554AC /* LineModelTests.swift */; };
@@ -369,7 +369,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6320D868204D81A70041FFAC /* Starscream.framework in Frameworks */,
+				635D668822C24F0C00A5BC9F /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,7 +385,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6352070A204D7A55008C8C54 /* Starscream.framework in Frameworks */,
+				635D668A22C24FA300A5BC9F /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -393,7 +393,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6352070C204D7A64008C8C54 /* Starscream.framework in Frameworks */,
+				635D668C22C24FAE00A5BC9F /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,7 +401,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6352070E204D7A6B008C8C54 /* Starscream.framework in Frameworks */,
+				635D668E22C2501E00A5BC9F /* Starscream in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -668,7 +668,6 @@
 				6320D83B204D806D0041FFAC /* Frameworks */,
 				6320D83C204D806D0041FFAC /* Headers */,
 				6320D83D204D806D0041FFAC /* Resources */,
-				6320D87D204D86BA0041FFAC /* Carthage */,
 				635E0E17204D942C00B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -676,6 +675,9 @@
 			dependencies = (
 			);
 			name = "QminderAPI-iOS";
+			packageProductDependencies = (
+				635D668722C24F0C00A5BC9F /* Starscream */,
+			);
 			productName = QminderAPI;
 			productReference = 6320D83F204D806D0041FFAC /* QminderAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -706,7 +708,6 @@
 				63520686204D79E9008C8C54 /* Frameworks */,
 				63520687204D79E9008C8C54 /* Headers */,
 				63520688204D79E9008C8C54 /* Resources */,
-				63DED698204D8F74001554AC /* Carthage */,
 				635E0E18204D945B00B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -714,6 +715,9 @@
 			dependencies = (
 			);
 			name = "QminderAPI-tvOS";
+			packageProductDependencies = (
+				635D668922C24FA300A5BC9F /* Starscream */,
+			);
 			productName = "QminderAPI-tvOS";
 			productReference = 6352068A204D79E9008C8C54 /* QminderAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -726,7 +730,6 @@
 				63520693204D7A00008C8C54 /* Frameworks */,
 				63520694204D7A00008C8C54 /* Headers */,
 				63520695204D7A00008C8C54 /* Resources */,
-				63DED699204D8F86001554AC /* Carthage */,
 				635E0E19204D952900B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -734,6 +737,9 @@
 			dependencies = (
 			);
 			name = "QminderAPI-macOS";
+			packageProductDependencies = (
+				635D668B22C24FAE00A5BC9F /* Starscream */,
+			);
 			productName = "QminderAPI-macOS";
 			productReference = 63520697204D7A00008C8C54 /* QminderAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -746,7 +752,6 @@
 				635206A0204D7A10008C8C54 /* Frameworks */,
 				635206A1204D7A10008C8C54 /* Headers */,
 				635206A2204D7A10008C8C54 /* Resources */,
-				63DED69A204D8FBB001554AC /* Carthage */,
 				635E0E1A204D954C00B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -754,6 +759,9 @@
 			dependencies = (
 			);
 			name = "QminderAPI-watchOS";
+			packageProductDependencies = (
+				635D668D22C2501E00A5BC9F /* Starscream */,
+			);
 			productName = "QminderAPI-watchOS";
 			productReference = 635206A4204D7A10008C8C54 /* QminderAPI.framework */;
 			productType = "com.apple.product-type.framework";
@@ -821,6 +829,9 @@
 				en,
 			);
 			mainGroup = 635205F1204D76C9008C8C54;
+			packageReferences = (
+				635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */,
+			);
 			productRefGroup = 635205FC204D76C9008C8C54 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -882,21 +893,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		6320D87D204D86BA0041FFAC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
 		635E0E17204D942C00B1123A /* Swiftlint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -952,51 +948,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		63DED698204D8F74001554AC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		63DED699204D8F86001554AC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		63DED69A204D8FBB001554AC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1311,7 +1262,12 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1337,7 +1293,12 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks $(PROJECT_DIR)/Carthage/Build/iOS";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1458,7 +1419,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1472,7 +1434,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QminderAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1487,7 +1453,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QminderAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1512,7 +1482,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1541,7 +1515,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1572,7 +1550,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
@@ -1602,7 +1584,11 @@
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.12;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
@@ -1631,7 +1617,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1661,7 +1651,11 @@
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1680,7 +1674,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QminderAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1696,7 +1694,11 @@
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = QminderAPITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -1773,6 +1775,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/daltoniam/Starscream";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.1.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		635D668722C24F0C00A5BC9F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		635D668922C24FA300A5BC9F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		635D668B22C24FAE00A5BC9F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+		635D668D22C2501E00A5BC9F /* Starscream */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 635D668622C24F0C00A5BC9F /* XCRemoteSwiftPackageReference "Starscream" */;
+			productName = Starscream;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 635205F2204D76C9008C8C54 /* Project object */;
 }
