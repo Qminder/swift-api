@@ -11,12 +11,6 @@ jobs:
             - v2-dep-{{ .Branch }}-
             - v2-dep-master-
             - v2-dep-
-      - run:
-          name: Carthage
-          command: |
-            brew update
-            brew outdated carthage || brew upgrade carthage
-            scripts/bootstrap-if-needed.sh
 
       - run:
           name: Install Swiftlint
@@ -73,10 +67,6 @@ jobs:
       - run:
           name: Pod lib lint
           command: pod lib lint --allow-warnings
-      - save_cache:
-          key: v2-dep-{{ .Branch }}-{{ epoch }}
-          paths:
-            - Carthage
 workflows:
   version: 2
   nightly:
