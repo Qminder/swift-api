@@ -16,9 +16,6 @@ public protocol Ticketable: Codable {
   /// A unique ticket ID
   var id: String { get }
   
-  /// Ticket number
-  var number: Int? { get }
-  
   /// Line ID
   var line: Int { get set }
   
@@ -99,7 +96,6 @@ public struct Ticket: Ticketable, Responsable {
   public var statusCode: Int?
   
   public let id: String
-  public let number: Int?
   public var line: Int
   public let source: Source
   public var status: Status
