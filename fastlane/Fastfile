@@ -12,7 +12,7 @@ platform :ios do
       scheme: "QminderAPI-iOS",
       xcargs: "CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO",
       clean: true,
-      devices: ["iPhone X"]
+      devices: ["iPhone Xs"]
     )
 
     # tvOS
