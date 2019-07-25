@@ -56,17 +56,17 @@ jobs:
             pod update
             xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
 
-      - run:
-          name: Check code coverage
-          command: |
-            brew install jq
-            sudo gem install atomos --no-document
-            sudo gem install jazzy --no-document
-            jazzy
-            ./documentation-coverage.sh
-      - run:
-          name: Pod lib lint
-          command: pod lib lint --allow-warnings
+      # - run:
+      #     name: Check code coverage
+      #     command: |
+      #       brew install jq
+      #       sudo gem install atomos --no-document
+      #       sudo gem install jazzy --no-document
+      #       jazzy
+      #       ./documentation-coverage.sh
+      # - run:
+      #     name: Pod lib lint
+      #     command: pod lib lint --allow-warnings
 workflows:
   version: 2
   nightly:
