@@ -8,8 +8,17 @@
 
 import Foundation
 
+public protocol TVDeviceProtocol {
+  var id: Int { get }
+  var name: String { get }
+  var theme: String { get }
+  var layout: String { get }
+  var settings: Settings? { get }
+  var features: [String]? { get }
+}
+
 /// User object
-public struct TVDevice: Responsable {
+public struct TVDevice: TVDeviceProtocol & Responsable {
   
   /// Status code from API
   public let statusCode: Int?
@@ -31,6 +40,13 @@ public struct TVDevice: Responsable {
   
   /// TV feature flags
   public let features: [String]?
+}
+
+public protocol TVSettingsProtocol {
+  var selectedLine: Int? { get }
+  var lines: Set<Int>? { get }
+  var clearTickets: ClearTickets? { get }
+  var notificationViewLineVisible: Bool? { get }
 }
 
 /// Created data object
