@@ -9,8 +9,6 @@ jobs:
       - restore_cache:
           keys:
             - v2-dep-{{ .Branch }}-
-            - v2-dep-master-
-            - v2-dep-
       - run:
           name: Carthage
           command: |
