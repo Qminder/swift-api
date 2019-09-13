@@ -60,6 +60,12 @@
 		6320D867204D81660041FFAC /* QminderAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6320D866204D81660041FFAC /* QminderAPI.podspec */; };
 		6320D868204D81A70041FFAC /* Starscream.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 63520674204D7966008C8C54 /* Starscream.framework */; };
 		6320D86B204D83310041FFAC /* QminderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320D83F204D806D0041FFAC /* QminderAPI.framework */; };
+		6331A695232B6FAD00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
+		6331A696232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
+		6331A697232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
+		6331A698232B6FB200A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
+		6331A699232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
+		6331A69A232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
 		635206AC204D7A2A008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		635206AE204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		635206B0204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
@@ -1106,12 +1112,14 @@
 				635206F2204D7A3F008C8C54 /* Extensions.swift in Sources */,
 				6304932D2052AFBB001529B4 /* Responsable.swift in Sources */,
 				631849712051703C0082068A /* QminderAPIEndpoint.swift in Sources */,
+				6331A698232B6FB200A705E5 /* TVSettingsProtocol.swift in Sources */,
 				635206B2204D7A2E008C8C54 /* QminderError.swift in Sources */,
 				63520700204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496C20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
 				6315470320A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6B21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAC20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
+				6331A695232B6FAD00A705E5 /* TVDeviceProtocol.swift in Sources */,
 				635206B8204D7A34008C8C54 /* Location.swift in Sources */,
 				635206D0204D7A39008C8C54 /* Status.swift in Sources */,
 				63AFBA9820D009E8009E3D1C /* WebsocketMessage.swift in Sources */,
@@ -1157,12 +1165,14 @@
 				635206ED204D7A3E008C8C54 /* Extensions.swift in Sources */,
 				6304932E2052AFBB001529B4 /* Responsable.swift in Sources */,
 				631849722051703C0082068A /* QminderAPIEndpoint.swift in Sources */,
+				6331A699232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */,
 				635206B4204D7A2E008C8C54 /* QminderError.swift in Sources */,
 				63520704204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496D20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
 				6315470420A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6C21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAD20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
+				6331A696232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */,
 				635206BE204D7A35008C8C54 /* Location.swift in Sources */,
 				635206D9204D7A39008C8C54 /* Status.swift in Sources */,
 				63AFBA9920D009E8009E3D1C /* WebsocketMessage.swift in Sources */,
@@ -1208,12 +1218,14 @@
 				635206E8204D7A3E008C8C54 /* Extensions.swift in Sources */,
 				6304932F2052AFBB001529B4 /* Responsable.swift in Sources */,
 				631849732051703C0082068A /* QminderAPIEndpoint.swift in Sources */,
+				6331A69A232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */,
 				635206B6204D7A2F008C8C54 /* QminderError.swift in Sources */,
 				63520708204D7A4B008C8C54 /* TicketEventResponse.swift in Sources */,
 				6318496E20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */,
 				6315470520A47B9A0032B2EC /* QminderEventsProtocol.swift in Sources */,
 				63E8AB6D21747E4400BC140E /* Line.swift in Sources */,
 				63AFBAAE20D0FC54009E3D1C /* LineWebsocketEvent.swift in Sources */,
+				6331A697232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */,
 				635206C4204D7A35008C8C54 /* Location.swift in Sources */,
 				635206E2204D7A3A008C8C54 /* Status.swift in Sources */,
 				63AFBA9A20D009E8009E3D1C /* WebsocketMessage.swift in Sources */,

@@ -10,7 +10,6 @@ import Foundation
 
 /// User object
 public struct TVDevice: TVDeviceProtocol & Responsable {
-  
   public let statusCode: Int?
   
   public let id: Int
