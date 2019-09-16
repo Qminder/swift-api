@@ -34,6 +34,7 @@ jobs:
           swift build
           .build/debug/TestWebsockets&
           cd ..
+          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - name: Codeconv
         run: |
