@@ -35,7 +35,8 @@
       "containerPath" : "container:QminderAPI.xcodeproj",
       "identifier" : "63520689204D79E9008C8C54",
       "name" : "QminderAPI-tvOS"
-    }
+    },
+    "testExecutionOrdering" : "random"
   },
   "testTargets" : [
     {
