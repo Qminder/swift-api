@@ -26,6 +26,15 @@ jobs:
       - name: Build wachOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
+      - name: Start websockets test server
+        run: |
+          cd TestWebsockets
+          # brew install libressl
+          # brew install pkg-config
+          swift build
+          .build/debug/TestWebsockets&
+          cd ..
+
       - name: Codeconv
         run: |
           sed -i"any_symbol" "s/SLACK_KEY/${SLACK_KEY}/" codecov.yml
