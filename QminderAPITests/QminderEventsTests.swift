@@ -32,7 +32,6 @@ class QminderEventsMock: QminderEventsProtocol {
                  callback: @escaping (Result<Ticket, QminderError>) -> Void) {
     let ticket = Ticket(statusCode: 200,
                         id: "1",
-                        number: nil,
                         line: 1,
                         source: .name,
                         status: .new,

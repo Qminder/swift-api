@@ -9,27 +9,14 @@
 import Foundation
 
 /// User object
-public struct TVDevice: Responsable {
-  
-  /// Status code from API
+public struct TVDevice: TVDeviceProtocol & Responsable {
   public let statusCode: Int?
-
-  /// Device ID
+  
   public let id: Int
-  
-  /// Device name
   public let name: String
-  
-  /// Name of TV theme
   public let theme: String
-  
-  /// Name of TV layout
   public let layout: String
-  
-  /// Settings of the TV, only included when applicable
   public let settings: Settings?
-  
-  /// TV feature flags
   public let features: [String]?
 }
 

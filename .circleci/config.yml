@@ -9,8 +9,12 @@ jobs:
       - restore_cache:
           keys:
             - v2-dep-{{ .Branch }}-
-            - v2-dep-master-
-            - v2-dep-
+      - run:
+          name: Carthage
+          command: |
+            brew update
+            brew outdated carthage || brew upgrade carthage
+            scripts/bootstrap-if-needed.sh
 
       - run:
           name: Install Swiftlint
@@ -30,8 +34,8 @@ jobs:
             swift build
             .build/debug/TestWebsockets&
             cd ..
-            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone Xs,OS=13.0' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
-            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K,OS=13.0' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - run:
           name: Codeconv
@@ -56,17 +60,21 @@ jobs:
             pod update
             xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
 
-      # - run:
-      #     name: Check code coverage
-      #     command: |
-      #       brew install jq
-      #       sudo gem install atomos --no-document
-      #       sudo gem install jazzy --no-document
-      #       jazzy
-      #       ./documentation-coverage.sh
-      # - run:
-      #     name: Pod lib lint
-      #     command: pod lib lint --allow-warnings
+      - run:
+          name: Check code coverage
+          command: |
+            brew install jq
+            sudo gem install atomos --no-document
+            sudo gem install jazzy --no-document
+            jazzy
+            ./documentation-coverage.sh
+      - run:
+          name: Pod lib lint
+          command: pod lib lint --allow-warnings
+      - save_cache:
+          key: v2-dep-{{ .Branch }}-{{ epoch }}
+          paths:
+            - Carthage
 workflows:
   version: 2
   nightly:
