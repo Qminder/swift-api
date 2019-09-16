@@ -730,7 +730,6 @@
 				63520693204D7A00008C8C54 /* Frameworks */,
 				63520694204D7A00008C8C54 /* Headers */,
 				63520695204D7A00008C8C54 /* Resources */,
-				63DED699204D8F86001554AC /* Carthage */,
 				635E0E19204D952900B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -753,7 +752,6 @@
 				635206A0204D7A10008C8C54 /* Frameworks */,
 				635206A1204D7A10008C8C54 /* Headers */,
 				635206A2204D7A10008C8C54 /* Resources */,
-				63DED69A204D8FBB001554AC /* Carthage */,
 				635E0E1A204D954C00B1123A /* Swiftlint */,
 			);
 			buildRules = (
@@ -951,36 +949,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
-		};
-		63DED699204D8F86001554AC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		63DED69A204D8FBB001554AC /* Carthage */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/Starscream.framework",
-			);
-			name = Carthage;
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
