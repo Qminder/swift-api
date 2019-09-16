@@ -330,8 +330,10 @@
 		635BDB65210B296B000EFDEC /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		635E0DEF204D915F00B1123A /* QminderAPITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QminderAPITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6361F3FB224CB2C500602836 /* QminderAPIProtocolResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QminderAPIProtocolResponse.swift; sourceTree = "<group>"; };
+		63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "QminderAPI-tvOS.xctestplan"; sourceTree = "<group>"; };
 		6370FF2F20860ADC00ED3196 /* ClearTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTickets.swift; sourceTree = "<group>"; };
 		637D698E2052EA0500C59BA2 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
+		637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Qminder-API-test.xctestplan"; path = "QminderAPI.xcodeproj/Qminder-API-test.xctestplan"; sourceTree = "<group>"; };
 		639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelperExtensions.swift; sourceTree = "<group>"; };
 		63AFBA9620D009E8009E3D1C /* WebsocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketMessage.swift; sourceTree = "<group>"; };
 		63AFBA9B20D00A0D009E3D1C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
@@ -429,6 +431,7 @@
 		635205F1204D76C9008C8C54 = {
 			isa = PBXGroup;
 			children = (
+				637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */,
 				6318496920516E010082068A /* QminderAPIPlayground.playground */,
 				6320D866204D81660041FFAC /* QminderAPI.podspec */,
 				6352062F204D78E5008C8C54 /* Sources */,
@@ -561,6 +564,7 @@
 			isa = PBXGroup;
 			children = (
 				63DED679204D8D60001554AC /* XCTestExtensions.swift */,
+				63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */,
 				639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */,
 				63DED67A204D8D60001554AC /* APITests */,
 				63DED680204D8D61001554AC /* EventTests */,

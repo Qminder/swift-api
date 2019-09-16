@@ -32,9 +32,9 @@ jobs:
           brew install libressl
           brew install pkg-config
           swift build
-          .build/debug/TestWebsockets&
-          cd ..
-          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+          # .build/debug/TestWebsockets&
+          # cd ..
+          # set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - name: Codeconv
         run: |
