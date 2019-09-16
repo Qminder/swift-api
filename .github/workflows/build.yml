@@ -8,6 +8,6 @@ jobs:
       - uses: actions/checkout@v1
       - name: Carthage
         uses: |
-              brew update
-              brew outdated carthage || brew upgrade carthage
-              scripts/bootstrap-if-needed.sh
+          brew update
+          brew outdated carthage || brew upgrade carthage
+          scripts/bootstrap-if-needed.sh
