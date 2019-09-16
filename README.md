@@ -1,6 +1,5 @@
 # Qminder Swift API
 
-[![CircleCI](https://circleci.com/gh/Qminder/swift-api.svg?style=svg)](https://circleci.com/gh/Qminder/swift-api)
 [![Version](https://img.shields.io/cocoapods/v/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
 [![License](https://img.shields.io/cocoapods/l/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
 [![Platform](https://img.shields.io/cocoapods/p/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
