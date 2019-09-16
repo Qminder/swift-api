@@ -3,11 +3,12 @@ on: [push]
 
 jobs:
   build:
+    name: Build and test
     runs-on: macOS-latest    
     steps:
       - uses: actions/checkout@v1
       - name: Carthage
-        uses: |
+        run: |
           brew update
           brew outdated carthage || brew upgrade carthage
           scripts/bootstrap-if-needed.sh
