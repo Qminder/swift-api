@@ -3,7 +3,7 @@
 [![Version](https://img.shields.io/cocoapods/v/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
 [![License](https://img.shields.io/cocoapods/l/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
 [![Platform](https://img.shields.io/cocoapods/p/QminderAPI.svg?style=flat)](http://cocoapods.org/pods/QminderAPI)
-![Swift](https://img.shields.io/badge/%20in-swift%204.2-orange.svg)
+![Swift](https://img.shields.io/badge/%20in-swift%205.1-orange.svg)
 [![codecov](https://codecov.io/gh/Qminder/swift-api/branch/master/graph/badge.svg)](https://codecov.io/gh/Qminder/swift-api)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Swift Package Manager compatible](https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg)](https://github.com/apple/swift-package-manager)
