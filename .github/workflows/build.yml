@@ -7,8 +7,53 @@ jobs:
     runs-on: macOS-latest    
     steps:
       - uses: actions/checkout@v1
-      - name: Carthage
+
+      - name: Install Swiftlint
+        run: brew install swiftlint
+
+      - name: Build macOS and watchOS
         run: |
-          brew update
-          brew outdated carthage || brew upgrade carthage
-          scripts/bootstrap-if-needed.sh
+          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+
+      - name: Start websockets test server
+        run: |
+          cd TestWebsockets
+          brew install libressl
+          brew install pkg-config
+          swift build
+          .build/debug/TestWebsockets&
+          cd ..
+          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone X' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+
+      - name: Codeconv
+        run: |
+          sed -i"any_symbol" "s/SLACK_KEY/${SLACK_KEY}/" codecov.yml
+          bash <(curl -s https://codecov.io/bash)
+
+      - name: SwiftPM Build
+        run: swift build
+
+      - name: Update ruby and cocoapods
+        run: |
+          sudo gem install cocoapods --pre
+          sudo gem cleanup
+          #curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
+
+      - name: Example project
+        run: |
+          cd Example
+          pod update
+          xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
+
+      - name: Check code coverage
+        run: |
+          brew install jq
+          sudo gem install atomos --no-document
+          sudo gem install jazzy --no-document
+          jazzy
+          ./documentation-coverage.sh
+
+      - name: Pod lib lint
+        run: pod lib lint --allow-warnings
