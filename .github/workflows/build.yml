@@ -6,7 +6,6 @@ jobs:
     runs-on: macOS-latest    
     steps:
       - uses: actions/checkout@v1
-      - name: Build
       - name: Carthage
         uses: |
               brew update
