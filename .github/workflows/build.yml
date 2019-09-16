@@ -17,36 +17,42 @@ jobs:
       - name: Build iOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Build tvOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+      # - name: Build tvOS
+      #   run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Build macOS and watchOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+      # - name: Build macOS and watchOS
+      #   run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Build wachOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+      # - name: Build wachOS
+      #   run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Codeconv
-        run: |
-          sed -i"any_symbol" "s/SLACK_KEY/${SLACK_KEY}/" codecov.yml
-          bash <(curl -s https://codecov.io/bash)
+      # - name: Codeconv
+      #   run: |
+      #     sed -i"any_symbol" "s/SLACK_KEY/${SLACK_KEY}/" codecov.yml
+      #     bash <(curl -s https://codecov.io/bash)
 
-      - name: SwiftPM Build
-        run: swift build
+      # - name: SwiftPM Build
+      #   run: swift build
 
-      - name: Update ruby and cocoapods
-        run: |
-          sudo gem install cocoapods --no-doc
-          sudo gem cleanup
+      # - name: Update ruby and cocoapods
+      #   run: |
+      #     sudo gem install cocoapods --no-doc
+      #     sudo gem cleanup
 
-      - name: Example project
-        run: |
-          cd Example
-          pod update
-          xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
+      # - name: Example project
+      #   run: |
+      #     cd Example
+      #     pod update
+      #     xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
 
-      - name: Pod lib lint
-        run: pod lib lint --allow-warnings
+      # - name: Pod lib lint
+      #   run: pod lib lint --allow-warnings
 
-      - name: Slack Notify
-        uses: rtCamp/action-slack-notify@v1.0.0
+      - name: action-slack
+        uses: 8398a7/action-slack@v2.2.0
+        with:
+          status: ${{ job.status }}
+          author_name: GithubCI
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
