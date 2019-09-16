@@ -15,10 +15,10 @@ jobs:
         run: brew install swiftlint
 
       - name: Build iOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
       - name: Build tvOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO YES clean build | xcpretty --color
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
       - name: Build macOS and watchOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
