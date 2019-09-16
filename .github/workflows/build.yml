@@ -19,16 +19,16 @@ jobs:
           set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
           set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Start websockets test server
-        run: |
-          cd TestWebsockets
-          brew install libressl
-          brew install pkg-config
-          swift build
-          .build/debug/TestWebsockets&
-          cd ..
-          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone Xs' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
-          set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+      # - name: Start websockets test server
+      #   run: |
+      #     cd TestWebsockets
+      #     brew install libressl
+      #     brew install pkg-config
+      #     swift build
+      #     .build/debug/TestWebsockets&
+      #     cd ..
+      #     set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone Xs' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+      #     set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - name: Codeconv
         run: |
@@ -40,9 +40,8 @@ jobs:
 
       - name: Update ruby and cocoapods
         run: |
-          sudo gem install cocoapods --pre
+          sudo gem install cocoapods --no-doc
           sudo gem cleanup
-          #curl https://cocoapods-specs.circleci.com/fetch-cocoapods-repo-from-s3.sh | bash -s cf
 
       - name: Example project
         run: |
