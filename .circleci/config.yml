@@ -2,15 +2,13 @@ version: 2
 jobs:
   build-and-test:
     macos:
-      xcode: "10.2.1"
+      xcode: "11.0.0"
 
     steps:
       - checkout
       - restore_cache:
           keys:
             - v2-dep-{{ .Branch }}-
-            - v2-dep-master-
-            - v2-dep-
       - run:
           name: Carthage
           command: |
@@ -36,7 +34,7 @@ jobs:
             swift build
             .build/debug/TestWebsockets&
             cd ..
-            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone X' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+            set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
             set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - run:
