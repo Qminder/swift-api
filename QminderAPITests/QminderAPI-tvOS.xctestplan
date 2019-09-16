@@ -1,0 +1,52 @@
+{
+  "configurations" : [
+    {
+      "id" : "3638604E-E612-427E-9869-86273BE3FB81",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "QMINDER_LOCATION_ID",
+        "value" : "$(QMINDER_LOCATION_ID)"
+      },
+      {
+        "key" : "QMINDER_API_KEY",
+        "value" : "$(QMINDER_API_KEY)"
+      },
+      {
+        "key" : "QMINDER_LINE_ID",
+        "value" : "$(QMINDER_LINE_ID)"
+      },
+      {
+        "key" : "QMINDER_USER_ID",
+        "value" : "$(QMINDER_USER_ID)"
+      },
+      {
+        "key" : "QMINDER_TV_ID",
+        "value" : "$(QMINDER_TV_ID)"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:QminderAPI.xcodeproj",
+      "identifier" : "63520689204D79E9008C8C54",
+      "name" : "QminderAPI-tvOS"
+    },
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:QminderAPI.xcodeproj",
+        "identifier" : "635E0DD0204D915F00B1123A",
+        "name" : "QminderAPITests-tvOS"
+      }
+    }
+  ],
+  "version" : 1
+}

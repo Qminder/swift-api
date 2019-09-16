@@ -59,16 +59,19 @@
 		6320D864204D815B0041FFAC /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		6320D867204D81660041FFAC /* QminderAPI.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6320D866204D81660041FFAC /* QminderAPI.podspec */; };
 		6320D86B204D83310041FFAC /* QminderAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6320D83F204D806D0041FFAC /* QminderAPI.framework */; };
+<<<<<<< HEAD
 		63216D9A232F705C009FD5C3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 63216D99232F705C009FD5C3 /* Starscream */; };
 		63216D9C232F7096009FD5C3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 63216D9B232F7096009FD5C3 /* Starscream */; };
 		63216D9E232F709A009FD5C3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 63216D9D232F709A009FD5C3 /* Starscream */; };
 		63216DA0232F709D009FD5C3 /* Starscream in Frameworks */ = {isa = PBXBuildFile; productRef = 63216D9F232F709D009FD5C3 /* Starscream */; };
+=======
 		6331A695232B6FAD00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
 		6331A696232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
 		6331A697232B6FAE00A705E5 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
 		6331A698232B6FB200A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
 		6331A699232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
 		6331A69A232B6FB300A705E5 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
+>>>>>>> improve_documentation
 		635206AC204D7A2A008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		635206AE204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
 		635206B0204D7A2B008C8C54 /* ResultProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520631204D78E5008C8C54 /* ResultProtocol.swift */; };
@@ -330,10 +333,8 @@
 		635BDB65210B296B000EFDEC /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		635E0DEF204D915F00B1123A /* QminderAPITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QminderAPITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6361F3FB224CB2C500602836 /* QminderAPIProtocolResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QminderAPIProtocolResponse.swift; sourceTree = "<group>"; };
-		63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "QminderAPI-tvOS.xctestplan"; sourceTree = "<group>"; };
 		6370FF2F20860ADC00ED3196 /* ClearTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTickets.swift; sourceTree = "<group>"; };
 		637D698E2052EA0500C59BA2 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
-		637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Qminder-API-test.xctestplan"; path = "QminderAPI.xcodeproj/Qminder-API-test.xctestplan"; sourceTree = "<group>"; };
 		639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelperExtensions.swift; sourceTree = "<group>"; };
 		63AFBA9620D009E8009E3D1C /* WebsocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketMessage.swift; sourceTree = "<group>"; };
 		63AFBA9B20D00A0D009E3D1C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
@@ -431,7 +432,6 @@
 		635205F1204D76C9008C8C54 = {
 			isa = PBXGroup;
 			children = (
-				637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */,
 				6318496920516E010082068A /* QminderAPIPlayground.playground */,
 				6320D866204D81660041FFAC /* QminderAPI.podspec */,
 				6352062F204D78E5008C8C54 /* Sources */,
@@ -564,7 +564,6 @@
 			isa = PBXGroup;
 			children = (
 				63DED679204D8D60001554AC /* XCTestExtensions.swift */,
-				63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */,
 				639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */,
 				63DED67A204D8D60001554AC /* APITests */,
 				63DED680204D8D61001554AC /* EventTests */,
@@ -1281,7 +1280,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1309,7 +1311,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1495,7 +1500,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1525,7 +1533,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1556,7 +1567,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1587,7 +1601,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -1618,7 +1635,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1649,7 +1669,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/watchOS",
+				);
 				INFOPLIST_FILE = "$(SRCROOT)/Sources/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1685,7 +1708,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1705,7 +1728,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = appletvos;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
