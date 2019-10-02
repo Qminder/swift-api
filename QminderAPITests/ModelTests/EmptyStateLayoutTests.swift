@@ -33,6 +33,10 @@ class EmptyStateLayoutTests: XCTestCase {
     testEmptyState("signIniPad", with: .signIniPad)
   }
   
+  func testOnBreak() {
+    testEmptyState("onbreak", with: .onBreak)
+  }
+  
   func testSignIn() {
     testEmptyState("signIn", with: .signIn)
   }

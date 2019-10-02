@@ -26,6 +26,9 @@ public enum EmptyStateLayout: String, Codable {
   /// Sign-in without iPad
   case signIn
   
+  /// On break
+  case onBreak
+  
   /// Other (not specified)
   case other
   
@@ -41,6 +44,8 @@ public enum EmptyStateLayout: String, Codable {
       self = .signIn
     case "closed":
       self = .closed
+    case "onbreak":
+      self = .onBreak
     default:
       self = .other
     }
