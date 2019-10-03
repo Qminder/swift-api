@@ -1,6 +1,6 @@
 name: Build Swift API
 on: [push]
-schedule:
+  schedule:
     - cron:  '* 00 * * *'
 
 jobs:
