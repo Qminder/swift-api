@@ -31,6 +31,16 @@ Depoy new Swift API version
 fastlane ios generate_docs
 ```
 Generate documentation
+### ios bump_patch
+```
+fastlane ios bump_patch
+```
+Bump to patch
+### ios bump_minor
+```
+fastlane ios bump_minor
+```
+Bump to patch
 
 ----
 
