@@ -19,6 +19,12 @@ jobs:
 
       - name: Build and run tests for iOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
+        env:
+          QMINDER_LOCATION_ID: $QMINDER_LOCATION_ID
+          QMINDER_API_KEY: $QMINDER_API_KEY
+          QMINDER_LINE_ID: $QMINDER_LINE_ID
+          QMINDER_USER_ID: $QMINDER_USER_ID
+          QMINDER_TV_ID: $QMINDER_TV_ID
 
       - name: Build tvOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
