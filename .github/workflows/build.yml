@@ -12,7 +12,7 @@ jobs:
         run: ls /Applications | grep Xcode
 
       - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_11.app
+        run: sudo xcode-select -s /Applications/Xcode_11.2.app
 
       - name: Install Swiftlint
         run: brew install swiftlint
@@ -29,15 +29,8 @@ jobs:
       - name: Build wachOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
-      - name: Start websockets test server
-        run: |
-          cd TestWebsockets
-          brew install libressl
-          brew install pkg-config
-          swift build
-          # .build/debug/TestWebsockets&
-          # cd ..
-          # set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
+      - name: Run tests
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme Qminder-API-test -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
 
       - name: Codeconv
         run: |

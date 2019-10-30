@@ -177,7 +177,6 @@
 		635E0DE2204D915F00B1123A /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED676204D8D60001554AC /* UserModelTests.swift */; };
 		635E0DE3204D915F00B1123A /* DeviceResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED675204D8D60001554AC /* DeviceResponseTests.swift */; };
 		635E0DE4204D915F00B1123A /* EmptyStateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED671204D8D60001554AC /* EmptyStateModelTests.swift */; };
-		635E0DE5204D915F00B1123A /* QminderWebsocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED681204D8D61001554AC /* QminderWebsocketTests.swift */; };
 		635E0DE6204D915F00B1123A /* TicketModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED677204D8D60001554AC /* TicketModelTests.swift */; };
 		635E0DE7204D915F00B1123A /* QminderResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED678204D8D60001554AC /* QminderResultTests.swift */; };
 		635E0DE8204D915F00B1123A /* LocationsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67D204D8D60001554AC /* LocationsAPITests.swift */; };
@@ -252,7 +251,6 @@
 		63DED692204D8D61001554AC /* LocationsAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67D204D8D60001554AC /* LocationsAPITests.swift */; };
 		63DED693204D8D61001554AC /* UsersAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67E204D8D60001554AC /* UsersAPITests.swift */; };
 		63DED694204D8D61001554AC /* LinesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67F204D8D60001554AC /* LinesAPITests.swift */; };
-		63DED695204D8D61001554AC /* QminderWebsocketTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED681204D8D61001554AC /* QminderWebsocketTests.swift */; };
 		63DED697204D8E27001554AC /* QminderApiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED696204D8E27001554AC /* QminderApiTests.swift */; };
 		63E8AB6A21747E4400BC140E /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8AB6921747E4400BC140E /* Line.swift */; };
 		63E8AB6B21747E4400BC140E /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8AB6921747E4400BC140E /* Line.swift */; };
@@ -333,7 +331,7 @@
 		63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "QminderAPI-tvOS.xctestplan"; sourceTree = "<group>"; };
 		6370FF2F20860ADC00ED3196 /* ClearTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTickets.swift; sourceTree = "<group>"; };
 		637D698E2052EA0500C59BA2 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
-		637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; name = "Qminder-API-test.xctestplan"; path = "QminderAPI.xcodeproj/Qminder-API-test.xctestplan"; sourceTree = "<group>"; };
+		637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Qminder-API-test.xctestplan"; sourceTree = "<group>"; };
 		639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelperExtensions.swift; sourceTree = "<group>"; };
 		63AFBA9620D009E8009E3D1C /* WebsocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketMessage.swift; sourceTree = "<group>"; };
 		63AFBA9B20D00A0D009E3D1C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
@@ -367,7 +365,6 @@
 		63DED67D204D8D60001554AC /* LocationsAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationsAPITests.swift; sourceTree = "<group>"; };
 		63DED67E204D8D60001554AC /* UsersAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersAPITests.swift; sourceTree = "<group>"; };
 		63DED67F204D8D60001554AC /* LinesAPITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesAPITests.swift; sourceTree = "<group>"; };
-		63DED681204D8D61001554AC /* QminderWebsocketTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderWebsocketTests.swift; sourceTree = "<group>"; };
 		63DED696204D8E27001554AC /* QminderApiTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderApiTests.swift; sourceTree = "<group>"; };
 		63E8AB6921747E4400BC140E /* Line.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
 		63E8AB6E2174862300BC140E /* Apollo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Apollo.framework; path = Carthage/Build/iOS/Apollo.framework; sourceTree = "<group>"; };
@@ -431,7 +428,6 @@
 		635205F1204D76C9008C8C54 = {
 			isa = PBXGroup;
 			children = (
-				637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */,
 				6318496920516E010082068A /* QminderAPIPlayground.playground */,
 				6320D866204D81660041FFAC /* QminderAPI.podspec */,
 				6352062F204D78E5008C8C54 /* Sources */,
@@ -563,11 +559,11 @@
 		6352067B204D79B9008C8C54 /* QminderAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				63DED679204D8D60001554AC /* XCTestExtensions.swift */,
+				637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */,
 				63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */,
+				63DED679204D8D60001554AC /* XCTestExtensions.swift */,
 				639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */,
 				63DED67A204D8D60001554AC /* APITests */,
-				63DED680204D8D61001554AC /* EventTests */,
 				63DED66B204D8D60001554AC /* ModelTests */,
 				63DED678204D8D60001554AC /* QminderResultTests.swift */,
 				63C422E3205678D600941DA4 /* QminderErrorTests.swift */,
@@ -632,14 +628,6 @@
 				63C422E72056B4C600941DA4 /* QminderAPITestWithoutAPIKeyTests.swift */,
 			);
 			path = APITests;
-			sourceTree = "<group>";
-		};
-		63DED680204D8D61001554AC /* EventTests */ = {
-			isa = PBXGroup;
-			children = (
-				63DED681204D8D61001554AC /* QminderWebsocketTests.swift */,
-			);
-			path = EventTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1052,7 +1040,6 @@
 				63C5D264205A6F7100269A16 /* Dictionary+Extensions.swift in Sources */,
 				63DED687204D8D61001554AC /* EmptyStateModelTests.swift in Sources */,
 				63C422E4205678D600941DA4 /* QminderErrorTests.swift in Sources */,
-				63DED695204D8D61001554AC /* QminderWebsocketTests.swift in Sources */,
 				63DED68D204D8D61001554AC /* TicketModelTests.swift in Sources */,
 				63DED68E204D8D61001554AC /* QminderResultTests.swift in Sources */,
 				63DED692204D8D61001554AC /* LocationsAPITests.swift in Sources */,
@@ -1245,7 +1232,6 @@
 				635E0DE3204D915F00B1123A /* DeviceResponseTests.swift in Sources */,
 				635E0DE4204D915F00B1123A /* EmptyStateModelTests.swift in Sources */,
 				63C5D269205AA16B00269A16 /* ResponseDataTests.swift in Sources */,
-				635E0DE5204D915F00B1123A /* QminderWebsocketTests.swift in Sources */,
 				635E0DE6204D915F00B1123A /* TicketModelTests.swift in Sources */,
 				63C5D26A205AA17400269A16 /* QminderAPITestWithoutAPIKeyTests.swift in Sources */,
 				635E0DE7204D915F00B1123A /* QminderResultTests.swift in Sources */,

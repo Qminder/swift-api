@@ -40,6 +40,9 @@
   "testTargets" : [
     {
       "parallelizable" : true,
+      "skippedTests" : [
+        "QminderWebsocketTests"
+      ],
       "target" : {
         "containerPath" : "container:QminderAPI.xcodeproj",
         "identifier" : "63520679204D79B9008C8C54",
