@@ -8,8 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
-      - name: Get Xcode version
-        run: xcodebuild -version
+      - name: List Xcode versions
+        run: ls /Applications | grep Xcode
 
       - name: Set Xcode version
         run: sudo xcode-select -s /Applications/Xcode_11.app
