@@ -41,6 +41,11 @@ Bump to patch
 fastlane ios bump_minor
 ```
 Bump to patch
+### ios bump_major
+```
+fastlane ios bump_major
+```
+Bump to patch
 
 ----
 

@@ -9,7 +9,7 @@
 import Foundation
 
 /// Empty state layout
-public enum EmptyStateLayout: String, Codable {
+public enum EmptyStateLayout: String, Codable, CaseIterable {
   
   /// TV connected
   case connected

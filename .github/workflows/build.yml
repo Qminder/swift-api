@@ -8,14 +8,23 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - name: List Xcode versions
+        run: ls /Applications | grep Xcode
+
       - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_11.app
+        run: sudo xcode-select -s /Applications/Xcode_11.2.app
 
       - name: Install Swiftlint
         run: brew install swiftlint
 
-      - name: Build iOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 8' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+      - name: Build and run tests for iOS
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
+        env:
+          QMINDER_LOCATION_ID: ${{ secrets.QMINDER_LOCATION_ID }}
+          QMINDER_API_KEY: ${{ secrets.QMINDER_API_KEY }}
+          QMINDER_LINE_ID: ${{ secrets.QMINDER_LINE_ID }}
+          QMINDER_USER_ID: ${{ secrets.QMINDER_USER_ID }}
+          QMINDER_TV_ID: ${{ secrets.QMINDER_TV_ID }}
 
       - name: Build tvOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
@@ -25,16 +34,6 @@ jobs:
 
       - name: Build wachOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
-
-      - name: Start websockets test server
-        run: |
-          cd TestWebsockets
-          brew install libressl
-          brew install pkg-config
-          swift build
-          # .build/debug/TestWebsockets&
-          # cd ..
-          # set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS -destination 'platform=tvOS Simulator,name=Apple TV 4K' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -enableCodeCoverage YES clean test build | xcpretty --color
 
       - name: Codeconv
         run: |

@@ -1,0 +1,51 @@
+{
+  "configurations" : [
+    {
+      "id" : "8D550618-BE34-4ED8-82CA-8DE48CE4A31B",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "environmentVariableEntries" : [
+      {
+        "key" : "QMINDER_LOCATION_ID",
+        "value" : "$(QMINDER_LOCATION_ID)"
+      },
+      {
+        "key" : "QMINDER_API_KEY",
+        "value" : "$(QMINDER_API_KEY)"
+      },
+      {
+        "key" : "QMINDER_LINE_ID",
+        "value" : "$(QMINDER_LINE_ID)"
+      },
+      {
+        "key" : "QMINDER_USER_ID",
+        "value" : "$(QMINDER_USER_ID)"
+      },
+      {
+        "key" : "QMINDER_TV_ID",
+        "value" : "$(QMINDER_TV_ID)"
+      }
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:QminderAPI.xcodeproj",
+      "identifier" : "6320D83E204D806D0041FFAC",
+      "name" : "QminderAPI-iOS"
+    }
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:QminderAPI.xcodeproj",
+        "identifier" : "63520679204D79B9008C8C54",
+        "name" : "QminderAPITests"
+      }
+    }
+  ],
+  "version" : 1
+}
