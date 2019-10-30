@@ -332,6 +332,7 @@
 		6370FF2F20860ADC00ED3196 /* ClearTickets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClearTickets.swift; sourceTree = "<group>"; };
 		637D698E2052EA0500C59BA2 /* Extensions+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extensions+Data.swift"; sourceTree = "<group>"; };
 		637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Qminder-API-test.xctestplan"; sourceTree = "<group>"; };
+		638154A22369C417000ED64C /* QminderAPI-iOS.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = file; name = "QminderAPI-iOS.xctestplan"; path = "QminderAPITests/QminderAPI-iOS.xctestplan"; sourceTree = SOURCE_ROOT; };
 		639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelperExtensions.swift; sourceTree = "<group>"; };
 		63AFBA9620D009E8009E3D1C /* WebsocketMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsocketMessage.swift; sourceTree = "<group>"; };
 		63AFBA9B20D00A0D009E3D1C /* Callback.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Callback.swift; sourceTree = "<group>"; };
@@ -561,6 +562,7 @@
 			children = (
 				637EBD8F232FAC10000C7F52 /* Qminder-API-test.xctestplan */,
 				63685E7E232F9F6B00B2A04D /* QminderAPI-tvOS.xctestplan */,
+				638154A22369C417000ED64C /* QminderAPI-iOS.xctestplan */,
 				63DED679204D8D60001554AC /* XCTestExtensions.swift */,
 				639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */,
 				63DED67A204D8D60001554AC /* APITests */,
