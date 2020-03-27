@@ -88,7 +88,7 @@ platform :ios do
     )
   end
 
-  desc "Bump to patch"
+  desc "Bump to minor"
   lane :bump_minor do
     version_bump_podspec(
       path: "QminderAPI.podspec",
@@ -96,7 +96,7 @@ platform :ios do
     )
   end
 
-  desc "Bump to patch"
+  desc "Bump to major"
   lane :bump_major do
     version_bump_podspec(
       path: "QminderAPI.podspec",
