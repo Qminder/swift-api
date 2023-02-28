@@ -36,21 +36,7 @@ public struct QminderAPI: QminderAPIProtocolResponse {
       completion(result, response)
     }
   }
-  
-  public func getLocationDetails(locationId: Int,
-                                 completion: @escaping (Result<Location, QminderError>) -> Void) {
-    getLocationDetails(locationId: locationId) { result, _ in
-      completion(result)
-    }
-  }
-  
-  public func getLocationDetails(locationId: Int,
-                                 completion: @escaping (Result<Location, QminderError>, HTTPURLResponse?) -> Void) {
-    fetch(.location(locationId), decodingType: Location.self) { result, response in
-      completion(result, response)
-    }
-  }
-  
+    
   public func getLocationLines(locationId: Int, completion: @escaping (Result<[Line], QminderError>) -> Void) {
     getLocationLines(locationId: locationId) { result, _ in
       completion(result)
@@ -60,19 +46,6 @@ public struct QminderAPI: QminderAPIProtocolResponse {
   public func getLocationLines(locationId: Int,
                                completion: @escaping (Result<[Line], QminderError>, HTTPURLResponse?) -> Void) {
     fetch(.lines(locationId), decodingType: Lines.self) { result, response in
-      completion(result, response)
-    }
-  }
-  
-  public func getLocationUsers(locationId: Int, completion: @escaping (Result<[User], QminderError>) -> Void) {
-    getLocationUsers(locationId: locationId) { result, _ in
-      completion(result)
-    }
-  }
-  
-  public func getLocationUsers(locationId: Int,
-                               completion: @escaping (Result<[User], QminderError>, HTTPURLResponse?) -> Void) {
-    fetch(.users(locationId), decodingType: Users.self) { result, response in
       completion(result, response)
     }
   }
@@ -102,52 +75,7 @@ public struct QminderAPI: QminderAPIProtocolResponse {
       completion(result, response)
     }
   }
-  
-  public func searchTickets(locationId: Int? = nil, lineId: Set<Int>? = nil, status: Set<Status>? = nil,
-                            callerId: Int? = nil, minCreatedTimestamp: Int? = nil, maxCreatedTimestamp: Int? = nil,
-                            minCalledTimestamp: Int? = nil, maxCalledTimestamp: Int? = nil,
-                            limit: Int? = nil, order: String? = nil, responseScope: Set<String>? = nil,
-                            completion: @escaping (Result<[Ticket], QminderError>) -> Void) {
-    searchTickets(locationId: locationId,
-                  lineId: lineId,
-                  status: status,
-                  callerId: callerId,
-                  minCreatedTimestamp: minCreatedTimestamp,
-                  maxCreatedTimestamp: maxCreatedTimestamp,
-                  minCalledTimestamp: minCalledTimestamp,
-                  maxCalledTimestamp: maxCalledTimestamp,
-                  limit: limit,
-                  order: order,
-                  responseScope: responseScope) { result, _ in
-                    completion(result)
-    }
-  }
-  
-  public func searchTickets(locationId: Int? = nil, lineId: Set<Int>? = nil, status: Set<Status>? = nil,
-                            callerId: Int? = nil, minCreatedTimestamp: Int? = nil, maxCreatedTimestamp: Int? = nil,
-                            minCalledTimestamp: Int? = nil, maxCalledTimestamp: Int? = nil,
-                            limit: Int? = nil, order: String? = nil, responseScope: Set<String>? = nil,
-                            completion: @escaping (Result<[Ticket], QminderError>, HTTPURLResponse?) -> Void) {
-    
-    var parameters = [String: Any]()
-    
-    parameters.set(value: locationId, forKey: "location")
-    parameters.set(value: lineId?.compactMap({ String($0) }).joined(separator: ","), forKey: "line")
-    parameters.set(value: status?.compactMap({ $0.rawValue }).joined(separator: ","), forKey: "status")
-    parameters.set(value: callerId, forKey: "caller")
-    parameters.set(value: minCreatedTimestamp, forKey: "minCreated")
-    parameters.set(value: maxCreatedTimestamp, forKey: "maxCreated")
-    parameters.set(value: minCalledTimestamp, forKey: "minCalled")
-    parameters.set(value: maxCalledTimestamp, forKey: "maxCalled")
-    parameters.set(value: limit, forKey: "limit")
-    parameters.set(value: order, forKey: "order")
-    parameters.set(value: responseScope?.compactMap({ String($0) }).joined(separator: ","), forKey: "responseScope")
-    
-    fetch(.tickets(parameters), decodingType: Tickets.self) { result, response in
-      completion(result, response)
-    }
-  }
-  
+
   public func getTicketDetails(ticketId: String, completion: @escaping (Result<Ticket, QminderError>) -> Void) {
     getTicketDetails(ticketId: ticketId) { result, _ in
       completion(result)
