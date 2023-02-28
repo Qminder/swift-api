@@ -42,7 +42,7 @@ You need to have a Qminder account to use this API.
 
 ## Author
 
-Qminder Ltd., info@qminderapp.com
+Qminder Ltd., info@qminder.com
 
 ## License
 
