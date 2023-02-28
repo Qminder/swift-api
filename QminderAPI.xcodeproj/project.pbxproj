@@ -1553,7 +1553,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
@@ -1584,7 +1584,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_BUNDLE_IDENTIFIER = com.qminder.QminderAPI;
 				PRODUCT_MODULE_NAME = QminderAPI;
 				PRODUCT_NAME = QminderAPI;
