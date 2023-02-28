@@ -14,9 +14,6 @@ jobs:
       - name: Set Xcode version
         run: sudo xcode-select -s /Applications/Xcode_14.2.app
 
-      - name: Install Swiftlint
-        run: brew install swiftlint
-
       - name: Build and run tests for iOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
         env:
