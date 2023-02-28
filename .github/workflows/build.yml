@@ -1,10 +1,10 @@
 name: Build Swift API
-on: [push, pull_request]
+on: pull_request
 
 jobs:
   build:
     name: Build and test
-    runs-on: macOS-latest
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
 
