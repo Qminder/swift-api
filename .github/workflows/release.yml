@@ -1,0 +1,14 @@
+name: Release
+on: pull_request
+
+jobs:
+  release:
+    name: Release to CocoaPods
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Publish to CocoaPod register
+        env:
+          COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
+        run: |
+          pod trunk push
