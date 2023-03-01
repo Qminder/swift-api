@@ -23,28 +23,12 @@ qminderAPI.getLocationsList {
   let _ = prettyPrint("Locations list", $0)
 }
 
-qminderAPI.getLocationDetails(locationId: 9135) {
-  let _ = prettyPrint("Location details", $0)
-}
-
 qminderAPI.getLocationLines(locationId: 9135) {
   let _ = prettyPrint("Location lines", $0)
 }
 
-qminderAPI.getLocationUsers(locationId: 9135) {
-  let _ = prettyPrint("Location users", $0)
-}
-
-qminderAPI.getLocationDesks(locationId: 9135) {
-  let _ = prettyPrint("Location desks", $0)
-}
-
 qminderAPI.getLineDetails(lineId: 64612) {
   let _ = prettyPrint("Line details", $0)
-}
-
-qminderAPI.searchTickets(locationId: 9135, status: [.new], limit: 50, responseScope: ["INTERACTIONS"]) {
-  let _ = prettyPrint("Tickets", $0)
 }
 
 qminderAPI.getTicketDetails(ticketId: "35604156") {
