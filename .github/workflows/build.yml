@@ -78,5 +78,5 @@ jobs:
       - name: Example project
         run: |
           cd Example
-          pod update
+          pod install
           xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
