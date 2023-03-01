@@ -7,7 +7,13 @@ jobs:
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
-      - name: Publish to CocoaPod register
+
+      - name: Update cocoapods
+        run: |
+          sudo gem install cocoapods --no-doc
+          sudo gem cleanup
+
+      - name: Release to CocoaPods register
         env:
           COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
         run: |
