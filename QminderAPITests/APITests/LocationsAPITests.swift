@@ -69,32 +69,4 @@ class LocationsAPITests: QminderAPITests {
     XCTAssertNotNil(line?.id)
     XCTAssertNotNil(line?.name)
   }
-  
-  func testDesksList() {
-    var desks: [Desk]?
-    var desk: Desk?
-    
-    wait { expectation in
-      qminderAPI.getLocationDesks(locationId: locationId) { result in
-        
-        XCTAssertTrue(Thread.isMainThread)
-        
-        switch result {
-        case let .success(value):
-          desks = value
-          desk = desks?.first
-          
-          expectation.fulfill()
-        case let .failure(error):
-          XCTFail("Can't get desks list \(error)")
-        }
-      }
-    }
-    
-    XCTAssertNotNil(desks)
-    
-    XCTAssertNotNil(desk)
-    XCTAssertNotNil(desk?.id)
-    XCTAssertNotNil(desk?.name)
-  }
 }

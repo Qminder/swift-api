@@ -24,14 +24,6 @@ public protocol QminderAPIProtocolResponse: QminderAPIProtocol {
   ///   - completion: Callback block what is executed when location lines is received
   func getLocationLines(locationId: Int,
                         completion: @escaping (Result<[Line], QminderError>, HTTPURLResponse?) -> Void)
-   
-  /// Get location desks with response
-  ///
-  /// - Parameters:
-  ///   - locationId: Location ID
-  ///   - completion: Callback block what is executed when location users is received
-  func getLocationDesks(locationId: Int,
-                        completion: @escaping (Result<[Desk], QminderError>, HTTPURLResponse?) -> Void)
   
   // MARK: - Lines
   /// Get line details with response

@@ -50,19 +50,6 @@ public struct QminderAPI: QminderAPIProtocolResponse {
     }
   }
   
-  public func getLocationDesks(locationId: Int, completion: @escaping (Result<[Desk], QminderError>) -> Void) {
-    getLocationDesks(locationId: locationId) { result, _ in
-      completion(result)
-    }
-  }
-  
-  public func getLocationDesks(locationId: Int,
-                               completion: @escaping (Result<[Desk], QminderError>, HTTPURLResponse?) -> Void) {
-    fetch(.desks(locationId), decodingType: Desks.self) { result, response in
-      completion(result, response)
-    }
-  }
-  
   public func getLineDetails(lineId: Int, completion: @escaping (Result<Line, QminderError>) -> Void) {
     getLineDetails(lineId: lineId) { result, _ in
       completion(result)

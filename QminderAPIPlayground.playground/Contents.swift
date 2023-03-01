@@ -27,10 +27,6 @@ qminderAPI.getLocationLines(locationId: 9135) {
   let _ = prettyPrint("Location lines", $0)
 }
 
-qminderAPI.getLocationDesks(locationId: 9135) {
-  let _ = prettyPrint("Location desks", $0)
-}
-
 qminderAPI.getLineDetails(lineId: 64612) {
   let _ = prettyPrint("Line details", $0)
 }
