@@ -36,12 +36,6 @@ jobs:
           sudo gem install cocoapods --no-doc
           sudo gem cleanup
 
-      - name: Example project
-        run: |
-          cd Example
-          pod update
-          xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
-
       - name: Pod lib lint
         run: pod lib lint --allow-warnings
 
@@ -75,3 +69,14 @@ jobs:
 
       - name: Build
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-${{ matrix.platform }} CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
+
+  compile-example-project:
+    name: Compile example project
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: Example project
+        run: |
+          cd Example
+          pod update
+          xcodebuild clean build -workspace QminderTVApp.xcworkspace -scheme QminderTVApp CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO CODE_SIGN_ENTITLEMENTS="" CODE_SIGNING_ALLOWED="NO"
