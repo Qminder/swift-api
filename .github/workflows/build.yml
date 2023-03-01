@@ -1,10 +1,10 @@
 name: Build Swift API
-on: [push, pull_request]
+on: pull_request
 
 jobs:
-  build:
+  test:
     name: Build and test
-    runs-on: macOS-latest    
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v1
 
@@ -12,12 +12,9 @@ jobs:
         run: ls /Applications | grep Xcode
 
       - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_11.7.app
+        run: sudo xcode-select -s /Applications/Xcode_14.2.app
 
-      - name: Install Swiftlint
-        run: brew install swiftlint
-
-      - name: Build and run tests for iOS
+      - name: Test on iOS
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
         env:
           QMINDER_LOCATION_ID: ${{ secrets.QMINDER_LOCATION_ID }}
@@ -25,15 +22,6 @@ jobs:
           QMINDER_LINE_ID: ${{ secrets.QMINDER_LINE_ID }}
           QMINDER_USER_ID: ${{ secrets.QMINDER_USER_ID }}
           QMINDER_TV_ID: ${{ secrets.QMINDER_TV_ID }}
-
-      - name: Build tvOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-tvOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
-
-      - name: Build macOS and watchOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-macOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
-
-      - name: Build wachOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-watchOS CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
 
       - name: Codeconv
         run: |
@@ -65,3 +53,25 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
+
+  build:
+    name: Build on ${{ matrix.platform }}
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        platform:
+          - iOS
+          - tvOS
+          - macOS
+          - watchOS
+    steps:
+      - uses: actions/checkout@v1
+
+      - name: List Xcode versions
+        run: ls /Applications | grep Xcode
+
+      - name: Set Xcode version
+        run: sudo xcode-select -s /Applications/Xcode_14.2.app
+
+      - name: Build
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-${{ matrix.platform }} CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
