@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'QminderAPI'
-  s.version          = '1.18.1'
+  s.version          = '2.0.0'
   s.summary          = 'Qminder iOS API'
 
   s.description      = <<-DESC
@@ -16,9 +16,9 @@ Pod::Spec.new do |s|
   s.source_files = "QminderAPI/Classes/*.swift"
 
   s.ios.deployment_target = '10.0'
-  s.tvos.deployment_target = '10.0'
-  s.osx.deployment_target = '10.12'
-  s.watchos.deployment_target = '3.0'
+  s.tvos.deployment_target = '11.0'
+  s.osx.deployment_target = '10.13'
+  s.watchos.deployment_target = '4.0'
 
   s.source_files = 'Sources/**/*.swift'
 
