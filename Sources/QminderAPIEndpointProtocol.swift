@@ -64,13 +64,11 @@ extension QminderAPIEndpointProtocol {
     var request = URLRequest(url: url.url!)
     request.httpMethod = method.rawValue
 
-    if apiKeyNeeded {
-      guard let key = apiKey else {
-        throw QminderError.apiKeyNotSet
-      }
-
-      request.setValue(key, forHTTPHeaderField: "X-Qminder-REST-API-Key")
+    guard let key = apiKey else {
+      throw QminderError.apiKeyNotSet
     }
+
+    request.setValue(key, forHTTPHeaderField: "X-Qminder-REST-API-Key")
 
     if encoding == .json {
       let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
