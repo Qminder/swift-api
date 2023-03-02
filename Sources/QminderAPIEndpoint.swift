@@ -45,9 +45,9 @@ enum QminderAPIEndpoint: QminderAPIEndpointProtocol {
     case let .user(userId):
       return "/users/\(userId)"
     case .tvCode:
-      return "/tv/code"
+      return "/code"
     case let .tvPairingStatus(code, _):
-      return "/tv/code/\(code)"
+      return "/code/\(code)"
     case let .tvDetails(tvId):
       return "/tv/\(tvId)"
     case let .tvHeartbeat(tvId, _):
@@ -73,15 +73,6 @@ enum QminderAPIEndpoint: QminderAPIEndpointProtocol {
       return .post
     default:
       return .get
-    }
-  }
-  
-  var apiKeyNeeded: Bool {
-    switch self {
-    case .tvCode, .tvPairingStatus:
-      return false
-    default:
-      return true
     }
   }
   
