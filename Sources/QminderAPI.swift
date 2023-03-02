@@ -17,7 +17,7 @@ public struct QminderAPI: QminderAPIProtocolResponse {
   /// Qminder API address
   private var serverAddress: String
 
-  /// Qminder TV Pairig Code address
+  /// Qminder TV Pairing Code address
   private var tvPairingServerAddress: String
   
   /// Queue to return result in
