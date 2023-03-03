@@ -16,13 +16,19 @@ public struct QminderAPI: QminderAPIProtocolResponse {
   
   /// Qminder API address
   private var serverAddress: String
+
+  /// Qminder TV Pairing Code address
+  private var tvPairingServerAddress: String
   
   /// Queue to return result in
   private var queue = DispatchQueue.main
   
-  public init(apiKey: String? = nil, serverAddress: String = "https://api.qminder.com/v1") {
+  public init(apiKey: String? = nil,
+              serverAddress: String = "https://api.qminder.com/v1",
+              tvPairingServerAddress: String = "https://tv.qminder.com") {
     self.apiKey = apiKey
     self.serverAddress = serverAddress
+    self.tvPairingServerAddress = tvPairingServerAddress
   }
   
   public func getLocationsList(completion: @escaping (Result<[Location], QminderError>) -> Void) {
@@ -97,7 +103,7 @@ public struct QminderAPI: QminderAPIProtocolResponse {
   
   public func getPairingCodeAndSecret(
     completion: @escaping (Result<TVPairingCode, QminderError>, HTTPURLResponse?) -> Void) {
-    fetch(.tvCode, decodingType: TVPairingCode.self) { result, response in
+    fetchTvPairing(.tvCode, decodingType: TVPairingCode.self) { result, response in
       completion(result, response)
     }
   }
@@ -113,7 +119,7 @@ public struct QminderAPI: QminderAPIProtocolResponse {
   public func pairTV(code: String,
                      secret: String,
                      completion: @escaping (Result<TVAPIData, QminderError>, HTTPURLResponse?) -> Void) {
-    fetch(.tvPairingStatus(code, ["secret": secret]), decodingType: TVAPIData.self) { result, response in
+    fetchTvPairing(.tvPairingStatus(code, ["secret": secret]), decodingType: TVAPIData.self) { result, response in
       completion(result, response)
     }
   }
@@ -218,6 +224,26 @@ private extension QminderAPI {
       }
     }
   }
+
+  /**
+    Fetch tv pairing endpoint with responsable
+    
+    - Parameters:
+      - endPoint: Qminder tv pairing code endpoint
+      - decodingType: Decoding data type
+      - completion: Closure called when data is retrieved correctly
+     */
+  func fetchTvPairing<T: Responsable>(_ endPoint: QminderAPIEndpoint, decodingType: T.Type,
+                                      _ completion: @escaping (Result<T, QminderError>, HTTPURLResponse?) -> Void) {
+      performTvPairingRequestWith(endPoint) { result, response in
+          switch result {
+          case let .success(data):
+              completion(data.decode(decodingType), response)
+          case let .failure(error):
+              completion(Result(error), response)
+          }
+      }
+  }
   
   /**
    Perform request
@@ -230,6 +256,34 @@ private extension QminderAPI {
                           _ completion: @escaping (Result<Data, QminderError>, HTTPURLResponse?) -> Void) {
     do {
       let request = try endPoint.request(serverAddress: serverAddress, apiKey: apiKey)
+      
+      request.printCurlString()
+      
+      URLSession.shared.dataTask(with: request) { data, response, error in
+        let httpURLResponse = response as? HTTPURLResponse
+        self.queue.async {
+          completion(self.parseResponse(data: data,
+                                        response: response,
+                                        error: error),
+                     httpURLResponse)
+        }
+      }.resume()
+    } catch {
+      completion(Result(error.qminderError), nil)
+    }
+  }
+
+  /**
+   Perform tv pairing code request
+   
+   - Parameters:
+     - endPoint: Qminder tv pairing code endpoint
+     - completion: Closure called when data is retrieved correctly
+  */
+  func performTvPairingRequestWith(_ endPoint: QminderAPIEndpoint,
+                                   _ completion: @escaping (Result<Data, QminderError>, HTTPURLResponse?) -> Void) {
+    do {
+      let request = try endPoint.requestUnauthorised(serverAddress: tvPairingServerAddress)
       
       request.printCurlString()
       

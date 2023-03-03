@@ -16,7 +16,8 @@ public protocol QminderAPIProtocol {
   /// - Parameters:
   ///   - apiKey: Qminder API key
   ///   - serverAddress: Optional server address (used for tests)
-  init(apiKey: String?, serverAddress: String)
+  ///   - tvPairingServerAddress: TV Code Pairing server address
+  init(apiKey: String?, serverAddress: String, tvPairingServerAddress: String)
   
   // MARK: - Location
   /// Get location list

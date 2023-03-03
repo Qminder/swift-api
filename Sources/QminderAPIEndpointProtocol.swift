@@ -20,14 +20,34 @@ protocol QminderAPIEndpointProtocol {
   /// HTTP methods
   var method: HTTPMethod { get }
   
-  /// Is API key needed
-  var apiKeyNeeded: Bool { get }
-  
   /// Encoding: none or JSON
   var encoding: ParameterEncoding { get }
 }
 
 extension QminderAPIEndpointProtocol {
+  
+  func requestUnauthorised(serverAddress: String) throws -> URLRequest {
+    var url = URLComponents(string: "\(serverAddress)\(path)")!
+    
+    if encoding == .none {
+      url.queryItems = parameters.map {
+          URLQueryItem(name: $0, value: String(describing: $1))
+      }
+    }
+    
+    var request = URLRequest(url: url.url!)
+    request.httpMethod = method.rawValue
+    
+    if encoding == .json {
+      let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
+      
+      request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+      request.setValue("application/json", forHTTPHeaderField: "Accept")
+      request.httpBody = jsonData
+    }
+    
+    return request
+  }
   
   /**
    Create request
@@ -44,13 +64,11 @@ extension QminderAPIEndpointProtocol {
     var request = URLRequest(url: url.url!)
     request.httpMethod = method.rawValue
     
-    if apiKeyNeeded {
-      guard let key = apiKey else {
-        throw QminderError.apiKeyNotSet
-      }
-      
-      request.setValue(key, forHTTPHeaderField: "X-Qminder-REST-API-Key")
+    guard let key = apiKey else {
+      throw QminderError.apiKeyNotSet
     }
+    
+    request.setValue(key, forHTTPHeaderField: "X-Qminder-REST-API-Key")
     
     if encoding == .json {
       let jsonData = try? JSONSerialization.data(withJSONObject: parameters, options: [])
