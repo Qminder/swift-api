@@ -257,8 +257,6 @@ private extension QminderAPI {
     do {
       let request = try endPoint.request(serverAddress: serverAddress, apiKey: apiKey)
       
-      request.printCurlString()
-      
       URLSession.shared.dataTask(with: request) { data, response, error in
         let httpURLResponse = response as? HTTPURLResponse
         self.queue.async {
@@ -284,8 +282,6 @@ private extension QminderAPI {
                                    _ completion: @escaping (Result<Data, QminderError>, HTTPURLResponse?) -> Void) {
     do {
       let request = try endPoint.requestUnauthorised(serverAddress: tvPairingServerAddress)
-      
-      request.printCurlString()
       
       URLSession.shared.dataTask(with: request) { data, response, error in
         let httpURLResponse = response as? HTTPURLResponse
