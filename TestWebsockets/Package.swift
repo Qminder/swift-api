@@ -5,7 +5,7 @@ import PackageDescription
 let package = Package(
     name: "TestWebsockets",
     dependencies: [
-        .package(url: "https://github.com/vapor/websocket.git", from: "2.6.1"),
+        .package(url: "https://github.com/vapor/websocket.git", from: "2.13.0"),
         .package(url: "https://github.com/vapor/http.git", from: "3.4.0")
     ],
     targets: [
