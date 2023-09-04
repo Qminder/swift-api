@@ -40,7 +40,7 @@ jobs:
         run: pod lib lint --allow-warnings
 
       - name: action-slack
-        uses: 8398a7/action-slack@v2.2.0
+        uses: 8398a7/action-slack@78391c20a77e510cde85f71fbd8175ce83f1ae6f # v2.7.0
         with:
           status: ${{ job.status }}
           author_name: GithubCI
