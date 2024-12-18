@@ -17,7 +17,7 @@ jobs:
           xcode-version: '15.0.1'
 
       - name: Test on iOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 15 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
         env:
           QMINDER_LOCATION_ID: ${{ secrets.QMINDER_LOCATION_ID }}
           QMINDER_API_KEY: ${{ secrets.QMINDER_API_KEY }}
