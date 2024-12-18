@@ -23,4 +23,8 @@ public enum Status: String, Codable {
   
   /// Served
   case served = "SERVED"
+    
+  case scheduled = "SCHEDULED"
+
+  case schedulingCancelled = "SCHEDULING_CANCELLED"
 }
