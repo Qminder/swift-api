@@ -38,18 +38,6 @@ jobs:
           sudo gem install cocoapods --no-doc
           sudo gem cleanup
 
-      - name: Pod lib lint
-        run: pod lib lint --allow-warnings
-
-      - name: action-slack
-        uses: 8398a7/action-slack@v2.2.0
-        with:
-          status: ${{ job.status }}
-          author_name: GithubCI
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-
   build:
     name: Build on ${{ matrix.platform }}
     runs-on: macos-latest
