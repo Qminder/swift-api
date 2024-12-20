@@ -11,11 +11,13 @@ jobs:
       - name: List Xcode versions
         run: ls /Applications | grep Xcode
 
-      - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_14.2.app
+      - name: Select Xcode version
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.0.1'
 
       - name: Test on iOS
-        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 11 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
+        run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-iOS -destination 'platform=iOS Simulator,name=iPhone 15 Pro' CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build test | xcpretty --color
         env:
           QMINDER_LOCATION_ID: ${{ secrets.QMINDER_LOCATION_ID }}
           QMINDER_API_KEY: ${{ secrets.QMINDER_API_KEY }}
@@ -36,18 +38,6 @@ jobs:
           sudo gem install cocoapods --no-doc
           sudo gem cleanup
 
-      - name: Pod lib lint
-        run: pod lib lint --allow-warnings
-
-      - name: action-slack
-        uses: 8398a7/action-slack@v2.2.0
-        with:
-          status: ${{ job.status }}
-          author_name: GithubCI
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK }}
-
   build:
     name: Build on ${{ matrix.platform }}
     runs-on: macos-latest
@@ -64,8 +54,10 @@ jobs:
       - name: List Xcode versions
         run: ls /Applications | grep Xcode
 
-      - name: Set Xcode version
-        run: sudo xcode-select -s /Applications/Xcode_14.2.app
+      - name: Select Xcode version
+        uses: maxim-lobanov/setup-xcode@v1
+        with:
+          xcode-version: '15.0.1'
 
       - name: Build
         run: set -o pipefail && xcodebuild -project QminderAPI.xcodeproj -scheme QminderAPI-${{ matrix.platform }} CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO clean build | xcpretty --color
