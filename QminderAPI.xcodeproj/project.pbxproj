@@ -242,15 +242,11 @@
 		63520648204D78E5008C8C54 /* QminderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderAPI.swift; sourceTree = "<group>"; };
 		63520649204D78E5008C8C54 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6352064A204D78E5008C8C54 /* HTTPMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
-		63520674204D7966008C8C54 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/iOS/Starscream.framework; sourceTree = "<group>"; };
 		6352067A204D79B9008C8C54 /* QminderAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QminderAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6352067E204D79B9008C8C54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6352068A204D79E9008C8C54 /* QminderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QminderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		63520697204D7A00008C8C54 /* QminderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QminderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		635206A4204D7A10008C8C54 /* QminderAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QminderAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		63520709204D7A55008C8C54 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/tvOS/Starscream.framework; sourceTree = "<group>"; };
-		6352070B204D7A64008C8C54 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/Mac/Starscream.framework; sourceTree = "<group>"; };
-		6352070D204D7A6B008C8C54 /* Starscream.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Starscream.framework; path = Carthage/Build/watchOS/Starscream.framework; sourceTree = "<group>"; };
 		63520713204D7D50008C8C54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		635BDB65210B296B000EFDEC /* Loggable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loggable.swift; sourceTree = "<group>"; };
 		635E0DEF204D915F00B1123A /* QminderAPITests-tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "QminderAPITests-tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -435,10 +431,6 @@
 				63E8AB702174863200BC140E /* Apollo.framework */,
 				63E8AB722174863F00BC140E /* Apollo.framework */,
 				63E8AB742174864D00BC140E /* Apollo.framework */,
-				6352070D204D7A6B008C8C54 /* Starscream.framework */,
-				6352070B204D7A64008C8C54 /* Starscream.framework */,
-				63520709204D7A55008C8C54 /* Starscream.framework */,
-				63520674204D7966008C8C54 /* Starscream.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
