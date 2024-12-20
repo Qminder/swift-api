@@ -32,9 +32,6 @@ public enum QminderError: Error {
   /// Can't parse to response
   case parseRequest
   
-  /// Event error
-  case event(Error)
-  
   /// Parsing error
   case parse
   

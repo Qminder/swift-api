@@ -1,8 +1,0 @@
-# Uncomment the next line to define a global platform for your project
-platform :tvos, '10.0'
-use_frameworks!
-
-target 'QminderTVApp' do
-  pod 'QminderAPI', :path => '../'
-
-end
