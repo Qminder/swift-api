@@ -14,9 +14,6 @@ class QminderAPITestWithoutAPIKeyTests: XCTestCase {
   /// Qminder API protocol
   var qminderAPI: QminderAPIProtocol!
   
-  /// Events
-  var events: QminderEvents!
-  
   override func setUp() {
     super.setUp()
     

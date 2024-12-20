@@ -11,7 +11,6 @@
 		6304932D2052AFBB001529B4 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304932B2052AFBB001529B4 /* Responsable.swift */; };
 		6304932E2052AFBB001529B4 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304932B2052AFBB001529B4 /* Responsable.swift */; };
 		6304932F2052AFBB001529B4 /* Responsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6304932B2052AFBB001529B4 /* Responsable.swift */; };
-		6315470720A4A1680032B2EC /* QminderEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315470620A4A1680032B2EC /* QminderEventsTests.swift */; };
 		63155D372327D66B00FFDB81 /* TVDeviceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */; };
 		63155D392327D76500FFDB81 /* TVSettingsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */; };
 		6318496B20516EC40082068A /* QminderAPIEndpointProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318496A20516EC40082068A /* QminderAPIEndpointProtocol.swift */; };
@@ -23,7 +22,6 @@
 		631849722051703C0082068A /* QminderAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318496F2051703C0082068A /* QminderAPIEndpoint.swift */; };
 		631849732051703C0082068A /* QminderAPIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6318496F2051703C0082068A /* QminderAPIEndpoint.swift */; };
 		631E0C4720AEE6340017C1BF /* TestHelperExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639E578D20AD8DF50089C90B /* TestHelperExtensions.swift */; };
-		631E0C4820AEE6510017C1BF /* QminderEventsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6315470620A4A1680032B2EC /* QminderEventsTests.swift */; };
 		6320D847204D81420041FFAC /* QminderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520648204D78E5008C8C54 /* QminderAPI.swift */; };
 		6320D848204D81420041FFAC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63520649204D78E5008C8C54 /* Extensions.swift */; };
 		6320D849204D81420041FFAC /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6352064A204D78E5008C8C54 /* HTTPMethod.swift */; };
@@ -134,12 +132,9 @@
 		635E0DDB204D915F00B1123A /* XCTestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED679204D8D60001554AC /* XCTestExtensions.swift */; };
 		635E0DDC204D915F00B1123A /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED670204D8D60001554AC /* ModelTests.swift */; };
 		635E0DDD204D915F00B1123A /* ApiDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66D204D8D60001554AC /* ApiDataModelTests.swift */; };
-		635E0DDE204D915F00B1123A /* TicketResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED673204D8D60001554AC /* TicketResponseTests.swift */; };
 		635E0DDF204D915F00B1123A /* DevicesAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED67C204D8D60001554AC /* DevicesAPITests.swift */; };
 		635E0DE0204D915F00B1123A /* TVPairingCodeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED672204D8D60001554AC /* TVPairingCodeModelTests.swift */; };
-		635E0DE1204D915F00B1123A /* LinesResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66E204D8D60001554AC /* LinesResponseTests.swift */; };
 		635E0DE2204D915F00B1123A /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED676204D8D60001554AC /* UserModelTests.swift */; };
-		635E0DE3204D915F00B1123A /* DeviceResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED675204D8D60001554AC /* DeviceResponseTests.swift */; };
 		635E0DE4204D915F00B1123A /* EmptyStateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED671204D8D60001554AC /* EmptyStateModelTests.swift */; };
 		635E0DE6204D915F00B1123A /* TicketModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED677204D8D60001554AC /* TicketModelTests.swift */; };
 		635E0DE7204D915F00B1123A /* QminderResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED678204D8D60001554AC /* QminderResultTests.swift */; };
@@ -178,14 +173,11 @@
 		63C5D26A205AA17400269A16 /* QminderAPITestWithoutAPIKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63C422E72056B4C600941DA4 /* QminderAPITestWithoutAPIKeyTests.swift */; };
 		63DED682204D8D61001554AC /* LineModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66C204D8D60001554AC /* LineModelTests.swift */; };
 		63DED683204D8D61001554AC /* ApiDataModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66D204D8D60001554AC /* ApiDataModelTests.swift */; };
-		63DED684204D8D61001554AC /* LinesResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66E204D8D60001554AC /* LinesResponseTests.swift */; };
 		63DED685204D8D61001554AC /* LocationModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED66F204D8D60001554AC /* LocationModelTests.swift */; };
 		63DED686204D8D61001554AC /* ModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED670204D8D60001554AC /* ModelTests.swift */; };
 		63DED687204D8D61001554AC /* EmptyStateModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED671204D8D60001554AC /* EmptyStateModelTests.swift */; };
 		63DED688204D8D61001554AC /* TVPairingCodeModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED672204D8D60001554AC /* TVPairingCodeModelTests.swift */; };
-		63DED689204D8D61001554AC /* TicketResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED673204D8D60001554AC /* TicketResponseTests.swift */; };
 		63DED68A204D8D61001554AC /* TVDeviceModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED674204D8D60001554AC /* TVDeviceModelTests.swift */; };
-		63DED68B204D8D61001554AC /* DeviceResponseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED675204D8D60001554AC /* DeviceResponseTests.swift */; };
 		63DED68C204D8D61001554AC /* UserModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED676204D8D60001554AC /* UserModelTests.swift */; };
 		63DED68D204D8D61001554AC /* TicketModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED677204D8D60001554AC /* TicketModelTests.swift */; };
 		63DED68E204D8D61001554AC /* QminderResultTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63DED678204D8D60001554AC /* QminderResultTests.swift */; };
@@ -221,7 +213,6 @@
 
 /* Begin PBXFileReference section */
 		6304932B2052AFBB001529B4 /* Responsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Responsable.swift; sourceTree = "<group>"; };
-		6315470620A4A1680032B2EC /* QminderEventsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QminderEventsTests.swift; sourceTree = "<group>"; };
 		63155D362327D66B00FFDB81 /* TVDeviceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVDeviceProtocol.swift; sourceTree = "<group>"; };
 		63155D382327D76500FFDB81 /* TVSettingsProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVSettingsProtocol.swift; sourceTree = "<group>"; };
 		6318496920516E010082068A /* QminderAPIPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = QminderAPIPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -280,14 +271,11 @@
 		63C5D263205A6F7100269A16 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
 		63DED66C204D8D60001554AC /* LineModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineModelTests.swift; sourceTree = "<group>"; };
 		63DED66D204D8D60001554AC /* ApiDataModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiDataModelTests.swift; sourceTree = "<group>"; };
-		63DED66E204D8D60001554AC /* LinesResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinesResponseTests.swift; sourceTree = "<group>"; };
 		63DED66F204D8D60001554AC /* LocationModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationModelTests.swift; sourceTree = "<group>"; };
 		63DED670204D8D60001554AC /* ModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelTests.swift; sourceTree = "<group>"; };
 		63DED671204D8D60001554AC /* EmptyStateModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmptyStateModelTests.swift; sourceTree = "<group>"; };
 		63DED672204D8D60001554AC /* TVPairingCodeModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVPairingCodeModelTests.swift; sourceTree = "<group>"; };
-		63DED673204D8D60001554AC /* TicketResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketResponseTests.swift; sourceTree = "<group>"; };
 		63DED674204D8D60001554AC /* TVDeviceModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVDeviceModelTests.swift; sourceTree = "<group>"; };
-		63DED675204D8D60001554AC /* DeviceResponseTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceResponseTests.swift; sourceTree = "<group>"; };
 		63DED676204D8D60001554AC /* UserModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModelTests.swift; sourceTree = "<group>"; };
 		63DED677204D8D60001554AC /* TicketModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TicketModelTests.swift; sourceTree = "<group>"; };
 		63DED678204D8D60001554AC /* QminderResultTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QminderResultTests.swift; sourceTree = "<group>"; };
@@ -470,7 +458,6 @@
 				63C422E92056B6EE00941DA4 /* QminderError+Extensions.swift */,
 				63C5D261205A6F5500269A16 /* Data+Extensions.swift */,
 				63C5D263205A6F7100269A16 /* Dictionary+Extensions.swift */,
-				6315470620A4A1680032B2EC /* QminderEventsTests.swift */,
 				6352067E204D79B9008C8C54 /* Info.plist */,
 			);
 			path = QminderAPITests;
@@ -501,13 +488,10 @@
 				63DED670204D8D60001554AC /* ModelTests.swift */,
 				63DED66C204D8D60001554AC /* LineModelTests.swift */,
 				63DED66D204D8D60001554AC /* ApiDataModelTests.swift */,
-				63DED66E204D8D60001554AC /* LinesResponseTests.swift */,
 				63DED66F204D8D60001554AC /* LocationModelTests.swift */,
 				63DED671204D8D60001554AC /* EmptyStateModelTests.swift */,
 				63DED672204D8D60001554AC /* TVPairingCodeModelTests.swift */,
-				63DED673204D8D60001554AC /* TicketResponseTests.swift */,
 				63DED674204D8D60001554AC /* TVDeviceModelTests.swift */,
-				63DED675204D8D60001554AC /* DeviceResponseTests.swift */,
 				63DED676204D8D60001554AC /* UserModelTests.swift */,
 				63DED677204D8D60001554AC /* TicketModelTests.swift */,
 				63C422E520567F3000941DA4 /* ResponseDataTests.swift */,
@@ -899,7 +883,6 @@
 				63DED694204D8D61001554AC /* LinesAPITests.swift in Sources */,
 				63DED693204D8D61001554AC /* UsersAPITests.swift in Sources */,
 				63DED682204D8D61001554AC /* LineModelTests.swift in Sources */,
-				6315470720A4A1680032B2EC /* QminderEventsTests.swift in Sources */,
 				639E578E20AD8DF50089C90B /* TestHelperExtensions.swift in Sources */,
 				63DED690204D8D61001554AC /* TicketsAPITests.swift in Sources */,
 				63DED697204D8E27001554AC /* QminderApiTests.swift in Sources */,
@@ -911,14 +894,11 @@
 				63DED68F204D8D61001554AC /* XCTestExtensions.swift in Sources */,
 				63DED686204D8D61001554AC /* ModelTests.swift in Sources */,
 				63DED683204D8D61001554AC /* ApiDataModelTests.swift in Sources */,
-				63DED689204D8D61001554AC /* TicketResponseTests.swift in Sources */,
 				63DED691204D8D61001554AC /* DevicesAPITests.swift in Sources */,
 				63DED688204D8D61001554AC /* TVPairingCodeModelTests.swift in Sources */,
-				63DED684204D8D61001554AC /* LinesResponseTests.swift in Sources */,
 				63C422E620567F3000941DA4 /* ResponseDataTests.swift in Sources */,
 				63C422E82056B4C600941DA4 /* QminderAPITestWithoutAPIKeyTests.swift in Sources */,
 				63DED68C204D8D61001554AC /* UserModelTests.swift in Sources */,
-				63DED68B204D8D61001554AC /* DeviceResponseTests.swift in Sources */,
 				63C5D264205A6F7100269A16 /* Dictionary+Extensions.swift in Sources */,
 				63DED687204D8D61001554AC /* EmptyStateModelTests.swift in Sources */,
 				63C422E4205678D600941DA4 /* QminderErrorTests.swift in Sources */,
@@ -1065,14 +1045,10 @@
 				635E0DDC204D915F00B1123A /* ModelTests.swift in Sources */,
 				63C5D265205AA15E00269A16 /* QminderError+Extensions.swift in Sources */,
 				635E0DDD204D915F00B1123A /* ApiDataModelTests.swift in Sources */,
-				635E0DDE204D915F00B1123A /* TicketResponseTests.swift in Sources */,
-				631E0C4820AEE6510017C1BF /* QminderEventsTests.swift in Sources */,
 				635E0DDF204D915F00B1123A /* DevicesAPITests.swift in Sources */,
 				63C5D266205AA16000269A16 /* Data+Extensions.swift in Sources */,
 				635E0DE0204D915F00B1123A /* TVPairingCodeModelTests.swift in Sources */,
-				635E0DE1204D915F00B1123A /* LinesResponseTests.swift in Sources */,
 				635E0DE2204D915F00B1123A /* UserModelTests.swift in Sources */,
-				635E0DE3204D915F00B1123A /* DeviceResponseTests.swift in Sources */,
 				635E0DE4204D915F00B1123A /* EmptyStateModelTests.swift in Sources */,
 				63C5D269205AA16B00269A16 /* ResponseDataTests.swift in Sources */,
 				635E0DE6204D915F00B1123A /* TicketModelTests.swift in Sources */,
